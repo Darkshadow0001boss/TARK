@@ -2,6 +2,7 @@ from fastapi import FastAPI, HTTPException
 
 from backend.app.brokers.alpaca_client import get_trading_client
 from backend.app.data.market_data import get_daily_bars
+from backend.app.engines.quant_features import calculate_features
 
 app = FastAPI(
     title="TARK",
@@ -81,4 +82,30 @@ def get_market(symbol: str):
         raise HTTPException(
             status_code=500,
             detail=f"Unable to retrieve market data: {str(exc)}",
+        )
+
+@app.get("/features/{symbol}")
+def get_features(symbol: str):
+    """
+    Calculate TARK quantitative features for a symbol.
+    """
+
+    try:
+        symbol = symbol.upper()
+
+        bars_response = get_daily_bars(symbol)
+
+        bars = bars_response.data.get(symbol, [])
+
+        features = calculate_features(bars)
+
+        return {
+            "symbol": symbol,
+            "features": features,
+        }
+
+    except Exception as exc:
+        raise HTTPException(
+            status_code=500,
+            detail=f"Unable to calculate features: {str(exc)}",
         )
