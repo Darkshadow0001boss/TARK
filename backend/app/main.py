@@ -1,6 +1,7 @@
 from fastapi import FastAPI, HTTPException
 
 from backend.app.brokers.alpaca_client import get_trading_client
+from backend.app.data.market_data import get_daily_bars
 
 app = FastAPI(
     title="TARK",
@@ -44,4 +45,40 @@ def get_account():
         raise HTTPException(
             status_code=500,
             detail=f"Unable to connect to Alpaca: {str(exc)}",
+        )
+
+
+@app.get("/market/{symbol}")
+def get_market(symbol: str):
+    """
+    Retrieve recent daily market bars.
+    """
+
+    try:
+        bars = get_daily_bars(symbol.upper())
+
+        data = []
+
+        for bar in bars.data.get(symbol.upper(), []):
+            data.append(
+                {
+                    "timestamp": bar.timestamp.isoformat(),
+                    "open": bar.open,
+                    "high": bar.high,
+                    "low": bar.low,
+                    "close": bar.close,
+                    "volume": bar.volume,
+                }
+            )
+
+        return {
+            "symbol": symbol.upper(),
+            "bars": data,
+            "count": len(data),
+        }
+
+    except Exception as exc:
+        raise HTTPException(
+            status_code=500,
+            detail=f"Unable to retrieve market data: {str(exc)}",
         )
