@@ -70,7 +70,24 @@ def calculate_features(bars) -> dict:
         df["volume"] / df["volume_average_20"]
     )
 
-    latest = df.iloc[-1]
+    # Use the most recent bar with valid calculated features.
+    valid_df = df.dropna(
+        subset=[
+            "ema_20",
+            "ema_50",
+            "rsi_14",
+            "atr_14",
+            "volume_ratio",
+        ]
+    )
+
+    # Ignore bars with zero volume.
+    valid_df = valid_df[valid_df["volume"] > 0]
+
+    if valid_df.empty:
+        raise ValueError("No valid completed market bars available")
+
+    latest = valid_df.iloc[-1]
 
     return {
         "timestamp": latest["timestamp"].isoformat(),

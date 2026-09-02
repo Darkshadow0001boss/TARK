@@ -3,7 +3,13 @@ from fastapi import FastAPI, HTTPException
 from backend.app.brokers.alpaca_client import get_trading_client
 from backend.app.data.market_data import get_daily_bars
 from backend.app.engines.quant_features import calculate_features
+from backend.app.data.market_data import (
+    get_daily_bars,
+    get_hourly_bars,
+    get_15m_bars,
+)
 
+from backend.app.engines.opportunity import evaluate_opportunity
 app = FastAPI(
     title="TARK",
     description="Reason Before Risk — Autonomous AI-Powered Options Trading Agent",
@@ -108,4 +114,43 @@ def get_features(symbol: str):
         raise HTTPException(
             status_code=500,
             detail=f"Unable to calculate features: {str(exc)}",
+        )
+
+@app.get("/opportunity/{symbol}")
+def get_opportunity(symbol: str):
+    """
+    Evaluate a TARK trading opportunity using:
+
+    - 1H directional context
+    - 15M entry confirmation
+    """
+
+    try:
+        symbol = symbol.upper()
+
+        hourly_response = get_hourly_bars(symbol)
+        entry_response = get_15m_bars(symbol)
+
+        hourly_bars = hourly_response.data.get(symbol, [])
+        entry_bars = entry_response.data.get(symbol, [])
+
+        hourly_features = calculate_features(hourly_bars)
+        entry_features = calculate_features(entry_bars)
+
+        opportunity = evaluate_opportunity(
+            symbol=symbol,
+            hourly_features=hourly_features,
+            entry_features=entry_features,
+        )
+
+        return {
+            "hourly_features": hourly_features,
+            "entry_features": entry_features,
+            "opportunity": opportunity,
+        }
+
+    except Exception as exc:
+        raise HTTPException(
+            status_code=500,
+            detail=f"Unable to evaluate opportunity: {str(exc)}",
         )
