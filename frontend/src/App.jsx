@@ -5,7 +5,8 @@ import "./App.css";
 /* CONFIG */
 /* ========================================================= */
 
-const API_BASE_URL = "http://127.0.0.1:8000";
+// const API_BASE_URL = "http://127.0.0.1:8000";
+const API_BASE_URL = "https://tark-1obk.onrender.com";
 
 const HISTORY_KEY = "tark_execution_history";
 
