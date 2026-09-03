@@ -4,3 +4,4 @@ python-dotenv
 alpaca-py
 pandas
 google-genai
+pydantic-settings
