@@ -38,7 +38,11 @@ from app.services.trade_registry import (
 from app.services.position_manager import (
     PositionManager,
 )
+from alpaca.trading.requests import GetOrdersRequest
 
+from alpaca.trading.enums import (
+    QueryOrderStatus,
+)
 
 # ============================================================
 # FASTAPI
@@ -104,7 +108,174 @@ def health_check():
         "status": "healthy",
     }
 
+# ============================================================
+# ALPACA ORDERS
+# ============================================================
 
+@app.get("/orders")
+def get_orders():
+
+    """
+    Retrieve recent Alpaca orders.
+    """
+
+    try:
+
+        client = get_trading_client()
+
+        request = GetOrdersRequest(
+            status=QueryOrderStatus.ALL,
+            limit=50,
+        )
+
+        orders = client.get_orders(
+            filter=request
+        )
+
+        results = []
+
+        for order in orders:
+
+            results.append({
+
+                "order_id":
+                    str(order.id),
+
+                "status":
+                    str(order.status),
+
+                "symbol":
+                    order.symbol,
+
+                "qty":
+                    str(order.qty),
+
+                "filled_qty":
+                    str(order.filled_qty),
+
+                "filled_avg_price":
+                    (
+                        str(order.filled_avg_price)
+                        if order.filled_avg_price
+                        else None
+                    ),
+
+                "created_at":
+                    (
+                        order.created_at.isoformat()
+                        if order.created_at
+                        else None
+                    ),
+            })
+
+
+        return {
+
+            "count":
+                len(results),
+
+            "orders":
+                results,
+        }
+
+
+    except Exception as exc:
+
+        raise HTTPException(
+
+            status_code=500,
+
+            detail={
+
+                "message":
+                    "Unable to retrieve Alpaca orders",
+
+                "error":
+                    str(exc),
+            },
+        )
+
+# ============================================================
+# ALPACA ORDER STATUS
+# ============================================================
+
+@app.get("/orders/{order_id}")
+def get_order(order_id: str):
+
+    """
+    Retrieve the current status of an Alpaca order.
+    """
+
+    try:
+
+        client = get_trading_client()
+
+        order = client.get_order_by_id(
+            order_id
+        )
+
+        return {
+
+            "order_id":
+                str(order.id),
+
+            "status":
+                str(order.status),
+
+            "symbol":
+                order.symbol,
+
+            "qty":
+                str(order.qty),
+
+            "filled_qty":
+                str(order.filled_qty),
+
+            "filled_avg_price":
+                (
+                    str(order.filled_avg_price)
+                    if order.filled_avg_price
+                    else None
+                ),
+
+            "created_at":
+                (
+                    order.created_at.isoformat()
+                    if order.created_at
+                    else None
+                ),
+
+            "submitted_at":
+                (
+                    order.submitted_at.isoformat()
+                    if order.submitted_at
+                    else None
+                ),
+
+            "filled_at":
+                (
+                    order.filled_at.isoformat()
+                    if order.filled_at
+                    else None
+                ),
+        }
+
+
+    except Exception as exc:
+
+        raise HTTPException(
+
+            status_code=500,
+
+            detail={
+
+                "message":
+                    "Unable to retrieve Alpaca order",
+
+                "error":
+                    str(exc),
+            },
+        )
 # ============================================================
 # ACCOUNT
 # ============================================================
