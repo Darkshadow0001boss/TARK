@@ -487,72 +487,287 @@ class TradeRegistry:
         execution_result: Dict[str, Any],
     ) -> Optional[Dict[str, Any]]:
 
-        execution_status = (
-            execution_result.get("status")
-            or "UNKNOWN"
-        )
+        """
+        Record the initial entry order submission.
+
+        Important:
+
+        SUBMITTED / ACCEPTED does NOT mean
+        the position is open.
+
+        Only FILLED creates an OPEN position.
+        """
+
+        execution_status = str(
+            execution_result.get(
+                "status",
+                ""
+            )
+        ).upper()
+
 
         # ------------------------------------------------------
-        # POSITION STATUS
+        # DEFAULT POSITION STATUS
+        # ------------------------------------------------------
+
+        position_status = "NO_POSITION"
+
+        position_decision = "NOT_APPLICABLE"
+
+
+        # ------------------------------------------------------
+        # DRY RUN
         # ------------------------------------------------------
 
         if execution_status == "DRY_RUN":
 
             position_status = "SIMULATED"
 
+            position_decision = "PENDING"
+
+
+        # ------------------------------------------------------
+        # ORDER SUBMITTED / ACCEPTED
+        # ------------------------------------------------------
+
         elif execution_status in (
+
             "SUBMITTED",
+
             "ACCEPTED",
-            "FILLED",
+
+            "PENDING_NEW",
+
+            "NEW",
+
         ):
+
+            position_status = "PENDING_FILL"
+
+            position_decision = "PENDING"
+
+
+        # ------------------------------------------------------
+        # PARTIALLY FILLED
+        # ------------------------------------------------------
+
+        elif execution_status in (
+
+            "PARTIALLY_FILLED",
+
+            "PARTIAL",
+
+        ):
+
+            position_status = "PARTIAL"
+
+            position_decision = "PENDING"
+
+
+        # ------------------------------------------------------
+        # FILLED
+        # ------------------------------------------------------
+
+        elif execution_status == "FILLED":
 
             position_status = "OPEN"
 
-        else:
+            position_decision = "PENDING"
+
+
+        # ------------------------------------------------------
+        # FAILED ORDER STATES
+        # ------------------------------------------------------
+
+        elif execution_status in (
+
+            "REJECTED",
+
+            "CANCELED",
+
+            "CANCELLED",
+
+            "EXPIRED",
+
+        ):
 
             position_status = "NO_POSITION"
 
+            position_decision = "NOT_APPLICABLE"
 
-        updates = {
 
-            # --------------------------------------------------
-            # EXECUTION
-            # --------------------------------------------------
-
-            "execution": execution_result,
-
-            "execution_status": execution_status,
-
-            # --------------------------------------------------
-            # POSITION
-            # --------------------------------------------------
-
-            "position_status": position_status,
-
-            "position_decision": (
-
-                "PENDING"
-
-                if position_status in (
-                    "OPEN",
-                    "SIMULATED",
-                )
-
-                else "NOT_APPLICABLE"
-            ),
-
-            # --------------------------------------------------
-            # EXECUTION METADATA
-            # --------------------------------------------------
-
-            "executed_at": self._now(),
-        }
-
+        # ------------------------------------------------------
+        # UPDATE
+        # ------------------------------------------------------
 
         return self.update_trade(
+
             trade_id,
-            updates,
+
+            {
+
+                "execution":
+                    execution_result,
+
+                "execution_status":
+                    execution_status,
+
+                "position_status":
+                    position_status,
+
+                "position_decision":
+                    position_decision,
+
+            },
         )
+# ==========================================================
+# UPDATE ORDER STATUS
+# ==========================================================
+
+def update_order_status(
+    self,
+    trade_id: str,
+    order_status: str,
+    order_data: Optional[
+        Dict[str, Any]
+    ] = None,
+) -> Optional[Dict[str, Any]]:
+
+    """
+    Update the latest Alpaca order status.
+
+    This synchronizes:
+
+    Alpaca Order Status
+            ↓
+    TARK Execution Status
+            ↓
+    TARK Position Status
+    """
+
+    normalized_status = str(
+        order_status
+    ).upper()
+
+
+    # ------------------------------------------------------
+    # DEFAULT
+    # ------------------------------------------------------
+
+    position_status = "NO_POSITION"
+
+    position_decision = "NOT_APPLICABLE"
+
+
+    # ------------------------------------------------------
+    # ACTIVE ORDER STATES
+    # ------------------------------------------------------
+
+    if normalized_status in (
+
+        "SUBMITTED",
+
+        "ACCEPTED",
+
+        "NEW",
+
+        "PENDING_NEW",
+
+        "PENDING_REPLACE",
+
+        "REPLACED",
+
+    ):
+
+        position_status = "PENDING_FILL"
+
+        position_decision = "PENDING"
+
+
+    # ------------------------------------------------------
+    # PARTIAL FILL
+    # ------------------------------------------------------
+
+    elif normalized_status in (
+
+        "PARTIALLY_FILLED",
+
+        "PARTIAL",
+
+    ):
+
+        position_status = "PARTIAL"
+
+        position_decision = "PENDING"
+
+
+    # ------------------------------------------------------
+    # FILLED
+    # ------------------------------------------------------
+
+    elif normalized_status == "FILLED":
+
+        position_status = "OPEN"
+
+        position_decision = "PENDING"
+
+
+    # ------------------------------------------------------
+    # TERMINAL ORDER STATES
+    # ------------------------------------------------------
+
+    elif normalized_status in (
+
+        "CANCELED",
+
+        "CANCELLED",
+
+        "REJECTED",
+
+        "EXPIRED",
+
+    ):
+
+        position_status = "NO_POSITION"
+
+        position_decision = "NOT_APPLICABLE"
+
+
+    # ------------------------------------------------------
+    # BUILD UPDATE
+    # ------------------------------------------------------
+
+    updates = {
+
+        "execution_status":
+            normalized_status,
+
+        "position_status":
+            position_status,
+
+        "position_decision":
+            position_decision,
+
+    }
+
+
+    # ------------------------------------------------------
+    # SAVE LATEST ORDER DATA
+    # ------------------------------------------------------
+
+    if order_data:
+
+        updates["order_status_data"] = (
+            order_data
+        )
+
+
+    return self.update_trade(
+
+        trade_id,
+
+        updates,
+    )
 
     # ==========================================================
     # RECORD EXIT EXECUTION

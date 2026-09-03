@@ -893,7 +893,215 @@ def run_autonomous_tark():
                     str(exc),
             },
         )   
+# ============================================================
+# TARK ORDER STATUS
+# ============================================================
 
+@app.get("/trades/{trade_id}/order-status")
+def get_order_status(trade_id: str):
+
+    """
+    Retrieve the latest Alpaca order status
+    and synchronize it with the TARK Trade Registry.
+    """
+
+    try:
+
+        # ----------------------------------------------------
+        # GET TRADE
+        # ----------------------------------------------------
+
+        registry = TradeRegistry()
+
+        trade_record = registry.get_trade(
+            trade_id
+        )
+
+
+        if not trade_record:
+
+            raise HTTPException(
+
+                status_code=404,
+
+                detail="TARK trade not found",
+            )
+
+
+        # ----------------------------------------------------
+        # GET EXECUTION DATA
+        # ----------------------------------------------------
+
+        execution = trade_record.get(
+            "execution",
+            {}
+        )
+
+
+        order_id = execution.get(
+            "order_id"
+        )
+
+
+        if not order_id:
+
+            raise HTTPException(
+
+                status_code=400,
+
+                detail=(
+                    "No Alpaca order ID exists "
+                    "for this trade."
+                ),
+            )
+
+
+        # ----------------------------------------------------
+        # GET LATEST ORDER FROM ALPACA
+        # ----------------------------------------------------
+
+        client = get_trading_client()
+
+        order = client.get_order_by_id(
+            order_id
+        )
+
+
+        # ----------------------------------------------------
+        # NORMALIZE STATUS
+        # ----------------------------------------------------
+
+        order_status = str(
+            order.status
+        )
+
+        if "." in order_status:
+
+            order_status = (
+                order_status.split(".")[-1]
+            )
+
+        order_status = order_status.upper()
+
+
+        # ----------------------------------------------------
+        # BUILD ORDER DATA
+        # ----------------------------------------------------
+
+        order_data = {
+
+            "order_id":
+                str(order.id),
+
+            "status":
+                order_status,
+
+            "symbol":
+                str(order.symbol),
+
+            "qty":
+                str(order.qty),
+
+            "filled_qty":
+                str(order.filled_qty),
+
+            "order_type":
+                str(order.order_type),
+
+            "side":
+                str(order.side),
+
+            "time_in_force":
+                str(order.time_in_force),
+
+            "submitted_at":
+
+                order.submitted_at.isoformat()
+
+                if order.submitted_at
+
+                else None,
+
+            "filled_at":
+
+                order.filled_at.isoformat()
+
+                if order.filled_at
+
+                else None,
+        }
+
+
+        # ----------------------------------------------------
+        # UPDATE TARK REGISTRY
+        # ----------------------------------------------------
+
+        updated_trade = (
+            registry.update_order_status(
+
+                trade_id=trade_id,
+
+                order_status=order_status,
+
+                order_data=order_data,
+            )
+        )
+
+
+        # ----------------------------------------------------
+        # RETURN
+        # ----------------------------------------------------
+
+        return {
+
+            "trade_id":
+                trade_id,
+
+            "order":
+                order_data,
+
+            "execution_status":
+
+                updated_trade.get(
+                    "execution_status"
+                )
+
+                if updated_trade
+
+                else order_status,
+
+            "position_status":
+
+                updated_trade.get(
+                    "position_status"
+                )
+
+                if updated_trade
+
+                else None,
+        }
+
+
+    except HTTPException:
+
+        raise
+
+
+    except Exception as exc:
+
+        raise HTTPException(
+
+            status_code=500,
+
+            detail={
+
+                "message":
+                    "Unable to retrieve order status",
+
+                "error":
+                    str(exc),
+            },
+        )
 # ============================================================
 # TARK TRADE HISTORY
 # ============================================================
@@ -1536,7 +1744,6 @@ def execute_trade(trade_id: str):
                 pricing.get("estimated_debit"),
         }
 
-
         # ----------------------------------------------------
         # EXECUTE
         # ----------------------------------------------------
@@ -1579,7 +1786,18 @@ def execute_trade(trade_id: str):
             "execution":
                 execution_result,
 
+            "execution_status":
+
+                updated_trade.get(
+                    "execution_status"
+                )
+
+                if updated_trade
+
+                else None,
+
             "position_status":
+
                 updated_trade.get(
                     "position_status"
                 )
@@ -1588,7 +1806,6 @@ def execute_trade(trade_id: str):
 
                 else None,
         }
-
 
     except HTTPException:
 
