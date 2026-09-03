@@ -1,3 +1,4 @@
+from http.client import HTTPException
 import time
 
 from app.config import TARK_DRY_RUN
@@ -103,6 +104,7 @@ class TarkOrchestrator:
         symbol: str,
         hourly_features: dict,
         entry_features: dict,
+        execute: bool = False,
     ) -> dict:
 
         symbol = symbol.upper()
@@ -454,17 +456,35 @@ class TarkOrchestrator:
                 pricing["estimated_debit"],
         }
 
-
         # ==================================================
         # STEP 13 — EXECUTION
+        #
+        # Execution is explicitly controlled by the caller.
+        # Analysis endpoints must never submit orders.
         # ==================================================
 
-        execution = self.order_executor.execute(
+        if execute:
 
-            trade=trade,
+            execution = self.order_executor.execute(
 
-            risk_result=risk,
-        )
+                trade=trade,
+
+                risk_result=risk,
+            )
+
+        else:
+
+            execution = {
+
+                "status": "READY_FOR_EXECUTION",
+
+                "message": (
+                    "Trade passed all TARK decision and risk "
+                    "gates but has not been submitted."
+                ),
+
+                "trade": trade,
+            }
 
 
         # ==================================================
@@ -507,9 +527,13 @@ class TarkOrchestrator:
                 execution,
 
             "execution_mode": (
-                "DRY_RUN"
-                if self.dry_run
-                else "PAPER_OR_LIVE"
+                "NOT_EXECUTED"
+                if not execute
+                else (
+                    "DRY_RUN"
+                    if self.dry_run
+                    else "PAPER"
+                )
             ),
 
             "message":
@@ -631,3 +655,150 @@ class TarkOrchestrator:
                 "start_of_day_equity":
                     start_of_day_equity,
     }
+# ============================================================
+# TARK EXECUTION
+# ============================================================
+
+@app.post("/execute/{trade_id}")
+def execute_trade(trade_id: str):
+
+    """
+    Execute a previously approved TARK trade.
+
+    Safety requirements:
+
+    - Trade must exist
+    - Trade must be APPROVED
+    - Trade must contain execution data
+    - Execution uses configured Alpaca environment
+    """
+
+    try:
+
+        registry = TradeRegistry()
+
+        trade_record = registry.get_trade(
+            trade_id
+        )
+
+
+        # ----------------------------------------------------
+        # TRADE EXISTS
+        # ----------------------------------------------------
+
+        if not trade_record:
+
+            raise HTTPException(
+
+                status_code=404,
+
+                detail="TARK trade not found",
+            )
+
+
+        # ----------------------------------------------------
+        # RISK APPROVAL
+        # ----------------------------------------------------
+
+        risk = trade_record.get(
+            "risk",
+            {}
+        )
+
+
+        if risk.get("status") != "APPROVED":
+
+            raise HTTPException(
+
+                status_code=400,
+
+                detail=(
+                    "Trade cannot be executed because "
+                    "it was not approved by the Risk Governor."
+                ),
+            )
+
+
+        # ----------------------------------------------------
+        # BUILD EXECUTION TRADE
+        # ----------------------------------------------------
+
+        contracts = trade_record.get(
+            "contracts",
+            {}
+        )
+
+        pricing = trade_record.get(
+            "pricing",
+            {}
+        )
+
+
+        execution_trade = {
+
+            "strategy":
+                contracts.get("strategy"),
+
+            "symbol":
+                contracts.get("symbol"),
+
+            "expiration_date":
+                contracts.get("expiration_date"),
+
+            "long_leg":
+                contracts.get("long_leg"),
+
+            "short_leg":
+                contracts.get("short_leg"),
+
+            "limit_price":
+                pricing.get("estimated_debit"),
+        }
+
+
+        # ----------------------------------------------------
+        # EXECUTE
+        # ----------------------------------------------------
+
+        orchestrator = TarkOrchestrator()
+
+        execution_result = (
+            orchestrator.order_executor.execute(
+
+                trade=execution_trade,
+
+                risk_result=risk,
+            )
+        )
+
+
+        return {
+
+            "trade_id":
+                trade_id,
+
+            "execution":
+                execution_result,
+        }
+
+
+    except HTTPException:
+
+        raise
+
+
+    except Exception as exc:
+
+        raise HTTPException(
+
+            status_code=500,
+
+            detail={
+
+                "message":
+                    "TARK execution failed",
+
+                "error":
+                    str(exc),
+            },
+        )
