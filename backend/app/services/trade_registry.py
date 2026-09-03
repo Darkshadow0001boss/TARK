@@ -477,7 +477,82 @@ class TradeRegistry:
             trade_id,
             updates,
         )
+    # ==========================================================
+    # RECORD ENTRY EXECUTION
+    # ==========================================================
 
+    def record_entry_execution(
+        self,
+        trade_id: str,
+        execution_result: Dict[str, Any],
+    ) -> Optional[Dict[str, Any]]:
+
+        execution_status = (
+            execution_result.get("status")
+            or "UNKNOWN"
+        )
+
+        # ------------------------------------------------------
+        # POSITION STATUS
+        # ------------------------------------------------------
+
+        if execution_status == "DRY_RUN":
+
+            position_status = "SIMULATED"
+
+        elif execution_status in (
+            "SUBMITTED",
+            "ACCEPTED",
+            "FILLED",
+        ):
+
+            position_status = "OPEN"
+
+        else:
+
+            position_status = "NO_POSITION"
+
+
+        updates = {
+
+            # --------------------------------------------------
+            # EXECUTION
+            # --------------------------------------------------
+
+            "execution": execution_result,
+
+            "execution_status": execution_status,
+
+            # --------------------------------------------------
+            # POSITION
+            # --------------------------------------------------
+
+            "position_status": position_status,
+
+            "position_decision": (
+
+                "PENDING"
+
+                if position_status in (
+                    "OPEN",
+                    "SIMULATED",
+                )
+
+                else "NOT_APPLICABLE"
+            ),
+
+            # --------------------------------------------------
+            # EXECUTION METADATA
+            # --------------------------------------------------
+
+            "executed_at": self._now(),
+        }
+
+
+        return self.update_trade(
+            trade_id,
+            updates,
+        )
 
     # ==========================================================
     # RECORD EXIT EXECUTION

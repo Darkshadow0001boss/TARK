@@ -1425,13 +1425,6 @@ def execute_trade(trade_id: str):
 
     """
     Execute a previously approved TARK trade.
-
-    Safety requirements:
-
-    - Trade must exist
-    - Trade must be APPROVED
-    - Trade must contain execution data
-    - Execution uses configured Alpaca environment
     """
 
     try:
@@ -1454,6 +1447,33 @@ def execute_trade(trade_id: str):
                 status_code=404,
 
                 detail="TARK trade not found",
+            )
+
+
+        # ----------------------------------------------------
+        # PREVENT DUPLICATE EXECUTION
+        # ----------------------------------------------------
+
+        execution_status = (
+            trade_record.get(
+                "execution_status"
+            )
+        )
+
+        if execution_status in (
+            "SUBMITTED",
+            "ACCEPTED",
+            "FILLED",
+        ):
+
+            raise HTTPException(
+
+                status_code=400,
+
+                detail=(
+                    "This trade has already been submitted "
+                    "for execution."
+                ),
             )
 
 
@@ -1533,6 +1553,24 @@ def execute_trade(trade_id: str):
         )
 
 
+        # ----------------------------------------------------
+        # UPDATE TRADE REGISTRY
+        # ----------------------------------------------------
+
+        updated_trade = (
+            registry.record_entry_execution(
+
+                trade_id=trade_id,
+
+                execution_result=execution_result,
+            )
+        )
+
+
+        # ----------------------------------------------------
+        # RETURN
+        # ----------------------------------------------------
+
         return {
 
             "trade_id":
@@ -1540,6 +1578,15 @@ def execute_trade(trade_id: str):
 
             "execution":
                 execution_result,
+
+            "position_status":
+                updated_trade.get(
+                    "position_status"
+                )
+
+                if updated_trade
+
+                else None,
         }
 
 
