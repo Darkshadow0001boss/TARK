@@ -5,7 +5,7 @@ from alpaca.data.historical import StockHistoricalDataClient
 from alpaca.data.requests import StockBarsRequest
 from alpaca.data.timeframe import TimeFrame, TimeFrameUnit
 
-from backend.app.config import settings
+from app.config import settings
 
 
 def get_market_data_client() -> StockHistoricalDataClient:

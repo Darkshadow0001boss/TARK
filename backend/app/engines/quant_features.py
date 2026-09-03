@@ -65,7 +65,13 @@ def calculate_features(bars) -> dict:
     df["atr_14"] = true_range.rolling(window=14).mean()
 
     # Volume ratio
-    df["volume_average_20"] = df["volume"].rolling(window=20).mean()
+    # Calculate the average using only completed bars with meaningful volume.
+    volume_series = df["volume"].replace(0, pd.NA)
+
+    df["volume_average_20"] = (
+        volume_series.rolling(window=20, min_periods=5).mean()
+    )
+
     df["volume_ratio"] = (
         df["volume"] / df["volume_average_20"]
     )

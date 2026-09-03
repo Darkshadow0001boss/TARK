@@ -3,9 +3,12 @@ from alpaca.trading.client import TradingClient
 from app.config import settings
 
 
-def get_trading_client() -> TradingClient:
+def get_options_client() -> TradingClient:
     """
-    Create and return the Alpaca trading client.
+    Return the Alpaca Trading Client.
+
+    This client will later be used to retrieve option contracts
+    and submit option orders.
     """
 
     return TradingClient(

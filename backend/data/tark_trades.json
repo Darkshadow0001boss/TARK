@@ -1,0 +1,4208 @@
+[
+  {
+    "id": "ed42beb9-d5f7-49fe-9fec-3f9a58087875",
+    "created_at": "2026-09-03T07:53:01.450135+00:00",
+    "updated_at": "2026-09-03T07:53:01.450135+00:00",
+    "mode": "MANUAL",
+    "symbol": "QQQ",
+    "status": "WAIT",
+    "stage": "OPPORTUNITY_ENGINE",
+    "message": "No sufficiently aligned trading opportunity detected",
+    "direction": "NEUTRAL",
+    "strategy": null,
+    "opportunity": {
+      "symbol": "QQQ",
+      "direction": "NEUTRAL",
+      "action": "WAIT",
+      "strategy": null,
+      "reasons": [
+        "1H trend: BEARISH",
+        "15M trend: NEUTRAL",
+        "15M momentum: OVEREXTENDED_BULLISH",
+        "Conditions are not sufficiently aligned for a trade candidate"
+      ]
+    },
+    "thesis": {},
+    "fragility_score": null,
+    "fragility_classification": null,
+    "fragility_decision": null,
+    "fragility": {},
+    "contracts": {},
+    "pricing": {},
+    "risk": {},
+    "approved_contracts": null,
+    "execution": {},
+    "execution_status": "WAIT",
+    "position_status": "NO_POSITION",
+    "position_decision": "NOT_APPLICABLE",
+    "position_history": [],
+    "autonomous": {}
+  },
+  {
+    "id": "aea81ed1-e54e-4c1b-a1e6-7cb68515075d",
+    "created_at": "2026-09-03T07:53:08.699723+00:00",
+    "updated_at": "2026-09-03T07:53:08.699723+00:00",
+    "mode": "MANUAL",
+    "symbol": "QQQ",
+    "status": "WAIT",
+    "stage": "OPPORTUNITY_ENGINE",
+    "message": "No sufficiently aligned trading opportunity detected",
+    "direction": "NEUTRAL",
+    "strategy": null,
+    "opportunity": {
+      "symbol": "QQQ",
+      "direction": "NEUTRAL",
+      "action": "WAIT",
+      "strategy": null,
+      "reasons": [
+        "1H trend: BEARISH",
+        "15M trend: NEUTRAL",
+        "15M momentum: OVEREXTENDED_BULLISH",
+        "Conditions are not sufficiently aligned for a trade candidate"
+      ]
+    },
+    "thesis": {},
+    "fragility_score": null,
+    "fragility_classification": null,
+    "fragility_decision": null,
+    "fragility": {},
+    "contracts": {},
+    "pricing": {},
+    "risk": {},
+    "approved_contracts": null,
+    "execution": {},
+    "execution_status": "WAIT",
+    "position_status": "NO_POSITION",
+    "position_decision": "NOT_APPLICABLE",
+    "position_history": [],
+    "autonomous": {}
+  },
+  {
+    "id": "1d6df021-447d-499a-a89e-1ffad87a61c7",
+    "created_at": "2026-09-03T07:53:46.617553+00:00",
+    "updated_at": "2026-09-03T07:53:46.617553+00:00",
+    "mode": "AUTONOMOUS",
+    "symbol": "AMD",
+    "status": "DRY_RUN",
+    "stage": "AUTONOMOUS_SCAN",
+    "message": null,
+    "direction": null,
+    "strategy": null,
+    "opportunity": {},
+    "thesis": {},
+    "fragility_score": null,
+    "fragility_classification": null,
+    "fragility_decision": null,
+    "fragility": {},
+    "contracts": {},
+    "pricing": {},
+    "risk": {},
+    "approved_contracts": null,
+    "execution": {},
+    "execution_status": "DRY_RUN",
+    "position_status": "NO_POSITION",
+    "position_decision": "NOT_APPLICABLE",
+    "position_history": [],
+    "autonomous": {
+      "scanned_symbols": null,
+      "candidates_found": null,
+      "selected_symbol": "AMD",
+      "scan_summary": {
+        "scanned_count": 8,
+        "candidate_count": 1
+      }
+    }
+  },
+  {
+    "id": "64544a8a-ea4c-4bd7-a52c-e85f415b443d",
+    "created_at": "2026-09-03T07:57:47.622117+00:00",
+    "updated_at": "2026-09-03T07:57:47.622117+00:00",
+    "mode": "MANUAL",
+    "symbol": "TSLA",
+    "status": "WAIT",
+    "stage": "OPPORTUNITY_ENGINE",
+    "message": "No sufficiently aligned trading opportunity detected",
+    "direction": "NEUTRAL",
+    "strategy": null,
+    "opportunity": {
+      "symbol": "TSLA",
+      "direction": "NEUTRAL",
+      "action": "WAIT",
+      "strategy": null,
+      "reasons": [
+        "1H trend: BULLISH",
+        "15M trend: NEUTRAL",
+        "15M momentum: BULLISH_CONFIRMED",
+        "Conditions are not sufficiently aligned for a trade candidate"
+      ]
+    },
+    "thesis": {},
+    "fragility_score": null,
+    "fragility_classification": null,
+    "fragility_decision": null,
+    "fragility": {},
+    "contracts": {},
+    "pricing": {},
+    "risk": {},
+    "approved_contracts": null,
+    "execution": {},
+    "execution_status": "WAIT",
+    "position_status": "NO_POSITION",
+    "position_decision": "NOT_APPLICABLE",
+    "position_history": [],
+    "autonomous": {}
+  },
+  {
+    "id": "345d49f4-e535-48da-aa7d-2d600c01c858",
+    "created_at": "2026-09-03T07:58:41.252644+00:00",
+    "updated_at": "2026-09-03T09:53:06.782253+00:00",
+    "mode": "MANUAL",
+    "symbol": "AMD",
+    "status": "DRY_RUN",
+    "stage": "EXECUTION_COMPLETE",
+    "message": null,
+    "direction": "BEARISH",
+    "strategy": "BEAR_PUT_SPREAD",
+    "opportunity": {
+      "symbol": "AMD",
+      "direction": "BEARISH",
+      "action": "CANDIDATE",
+      "strategy": "BEAR_PUT_SPREAD",
+      "reasons": [
+        "1H trend is bearish",
+        "15M trend confirms bearish direction",
+        "15M RSI confirms bearish momentum"
+      ]
+    },
+    "thesis": {
+      "symbol": "AMD",
+      "direction": "BEARISH",
+      "confidence": "MEDIUM",
+      "supporting_evidence": [
+        "Hourly price (456.51) is below both the 20 EMA (460.31) and 50 EMA (466.23), confirming a primary downtrend.",
+        "Entry timeframe price (456.51) is below both its 20 EMA (457.0) and 50 EMA (458.69), indicating short-term bearish alignment.",
+        "RSI is in bearish territory on both timeframes (41.99 hourly, 44.61 entry), remaining below the 50 neutral threshold.",
+        "Volume ratio at the entry timestamp is significantly elevated at 5.34, suggesting strong participation behind the price action."
+      ],
+      "contradictions": [
+        "Despite price remaining unchanged at 456.51, the entry RSI (44.61) is higher than the hourly RSI (41.99), showing a minor loss in downward momentum.",
+        "The entry price of 456.51 is trading extremely close to the short-term 20 EMA resistance of 457.0, risking a minor breakout upward."
+      ],
+      "neutral_scenario": "The price consolidates sideways between 456.00 and 458.00, causing the entry EMAs to flatten and the volume ratio to collapse back to near-average levels, rendering the directional bias inconclusive.",
+      "failure_scenario": "The price breaks above the entry 50 EMA (458.69) and subsequently breaches the hourly 20 EMA (460.31) on rising volume, invalidating the bearish thesis.",
+      "reasoning_summary": "AMD exhibits a clear bearish structure with price staying below key moving averages on multiple timeframes and supported by an exceptional entry volume surge (5.34). However, confidence is capped at MEDIUM due to a minor short-term RSI divergence and immediate proximity to overhead EMA resistance."
+    },
+    "fragility_score": 25,
+    "fragility_classification": "LOW",
+    "fragility_decision": "TRADE",
+    "fragility": {
+      "score": 25,
+      "classification": "LOW",
+      "decision": "TRADE",
+      "override": null,
+      "components": {
+        "trend": 0,
+        "momentum": 0,
+        "volume": 0,
+        "neutral_pressure": 10,
+        "failure_pressure": 10,
+        "volatility": 5
+      }
+    },
+    "contracts": {
+      "strategy": "BEAR_PUT_SPREAD",
+      "symbol": "AMD",
+      "expiration_date": "2026-09-04",
+      "long_leg": {
+        "symbol": "AMD260904P00457500",
+        "strike": 457.5,
+        "side": "BUY",
+        "type": "PUT"
+      },
+      "short_leg": {
+        "symbol": "AMD260904P00452500",
+        "strike": 452.5,
+        "side": "SELL",
+        "type": "PUT"
+      }
+    },
+    "pricing": {
+      "long_leg": {
+        "symbol": "AMD260904P00457500",
+        "bid": 7.39,
+        "ask": 7.58,
+        "mid": 7.48
+      },
+      "short_leg": {
+        "symbol": "AMD260904P00452500",
+        "bid": 5.1,
+        "ask": 5.45,
+        "mid": 5.28
+      },
+      "estimated_debit": 2.48,
+      "estimated_mid_debit": 2.2
+    },
+    "risk": {
+      "status": "APPROVED",
+      "reason_codes": [],
+      "symbol": "AMD",
+      "strategy": "BEAR_PUT_SPREAD",
+      "decision": "TRADE",
+      "account_equity": 100000.0,
+      "start_of_day_equity": 100000.0,
+      "max_trade_risk": 1000.0,
+      "risk_per_spread": 248.0,
+      "requested_contracts": 5,
+      "maximum_contracts": 4,
+      "approved_contracts": 4,
+      "proposed_max_loss": 992.0,
+      "current_portfolio_risk": 0.0,
+      "proposed_portfolio_risk": 992.0,
+      "max_portfolio_risk": 2000.0,
+      "daily_realized_pnl": 0.0,
+      "daily_loss_limit": 2000.0,
+      "buying_power": 400000.0
+    },
+    "approved_contracts": 4,
+    "execution": {
+      "status": "DRY_RUN",
+      "message": "Multi-leg order built but NOT sent to Alpaca",
+      "order": {
+        "strategy": "BEAR_PUT_SPREAD",
+        "symbol": "AMD",
+        "contracts": 4,
+        "limit_price": 2.48,
+        "expiration_date": "2026-09-04",
+        "legs": [
+          {
+            "symbol": "AMD260904P00457500",
+            "side": "BUY",
+            "ratio_qty": 1
+          },
+          {
+            "symbol": "AMD260904P00452500",
+            "side": "SELL",
+            "ratio_qty": 1
+          }
+        ]
+      }
+    },
+    "execution_status": "DRY_RUN",
+    "position_status": "CLOSED",
+    "position_decision": "EXIT",
+    "position_history": [
+      {
+        "timestamp": "2026-09-03T09:35:37.267544+00:00",
+        "decision": "HOLD",
+        "reason": "Original trade thesis remains structurally valid.",
+        "details": {
+          "opportunity": {
+            "symbol": "AMD",
+            "direction": "BEARISH",
+            "action": "CANDIDATE",
+            "strategy": "BEAR_PUT_SPREAD",
+            "reasons": [
+              "1H trend is bearish",
+              "15M trend confirms bearish direction",
+              "15M RSI confirms bearish momentum"
+            ]
+          },
+          "fragility": {
+            "score": 25,
+            "classification": "LOW",
+            "decision": "TRADE",
+            "override": null,
+            "components": {
+              "trend": 0,
+              "momentum": 0,
+              "volume": 0,
+              "neutral_pressure": 10,
+              "failure_pressure": 10,
+              "volatility": 5
+            }
+          },
+          "thesis_valid": true,
+          "pricing": {
+            "long_leg": {
+              "symbol": "AMD260904P00457500",
+              "bid": 7.39,
+              "ask": 7.58,
+              "mid": 7.48
+            },
+            "short_leg": {
+              "symbol": "AMD260904P00452500",
+              "bid": 5.1,
+              "ask": 5.45,
+              "mid": 5.28
+            },
+            "estimated_debit": 2.48,
+            "estimated_mid_debit": 2.2,
+            "estimated_exit_credit": 1.94
+          },
+          "pnl": {
+            "available": true,
+            "entry_price": 2.48,
+            "current_mark": 2.2,
+            "contracts": 4,
+            "unrealized_pnl": -112.0,
+            "unrealized_pnl_percent": -11.29
+          }
+        }
+      },
+      {
+        "timestamp": "2026-09-03T09:53:06.721583+00:00",
+        "decision": "EXIT",
+        "reason": "Structural fragility reached the critical exit threshold.",
+        "details": {
+          "opportunity": {
+            "symbol": "AMD",
+            "direction": "BEARISH",
+            "action": "CANDIDATE",
+            "strategy": "BEAR_PUT_SPREAD",
+            "reasons": [
+              "1H trend is bearish",
+              "15M trend confirms bearish direction",
+              "15M RSI confirms bearish momentum"
+            ]
+          },
+          "fragility": {
+            "score": 25,
+            "classification": "LOW",
+            "decision": "TRADE",
+            "override": null,
+            "components": {
+              "trend": 0,
+              "momentum": 0,
+              "volume": 0,
+              "neutral_pressure": 10,
+              "failure_pressure": 10,
+              "volatility": 5
+            }
+          },
+          "pricing": {
+            "long_leg": {
+              "symbol": "AMD260904P00457500",
+              "bid": 7.39,
+              "ask": 7.58,
+              "mid": 7.48
+            },
+            "short_leg": {
+              "symbol": "AMD260904P00452500",
+              "bid": 5.1,
+              "ask": 5.45,
+              "mid": 5.28
+            },
+            "estimated_debit": 2.48,
+            "estimated_mid_debit": 2.2,
+            "estimated_exit_credit": 1.94
+          },
+          "pnl": {
+            "available": true,
+            "entry_price": 2.48,
+            "current_mark": 2.2,
+            "contracts": 4,
+            "unrealized_pnl": -112.0,
+            "unrealized_pnl_percent": -11.29
+          },
+          "realized_pnl": {
+            "available": true,
+            "entry_price": 2.48,
+            "exit_price": 1.94,
+            "contracts": 4,
+            "realized_pnl": -216.0,
+            "realized_pnl_percent": -21.77
+          },
+          "thesis_valid": true,
+          "exit_execution": {
+            "status": "DRY_RUN",
+            "message": "Closing multi-leg order built but NOT sent to Alpaca",
+            "order": {
+              "action": "CLOSE_POSITION",
+              "strategy": "BEAR_PUT_SPREAD",
+              "symbol": "AMD",
+              "contracts": 4,
+              "limit_price": 1.94,
+              "legs": [
+                {
+                  "symbol": "AMD260904P00457500",
+                  "side": "SELL",
+                  "ratio_qty": 1
+                },
+                {
+                  "symbol": "AMD260904P00452500",
+                  "side": "BUY",
+                  "ratio_qty": 1
+                }
+              ]
+            }
+          }
+        }
+      }
+    ],
+    "autonomous": {},
+    "exit_execution": {
+      "status": "DRY_RUN",
+      "message": "Closing multi-leg order built but NOT sent to Alpaca",
+      "order": {
+        "action": "CLOSE_POSITION",
+        "strategy": "BEAR_PUT_SPREAD",
+        "symbol": "AMD",
+        "contracts": 4,
+        "limit_price": 1.94,
+        "legs": [
+          {
+            "symbol": "AMD260904P00457500",
+            "side": "SELL",
+            "ratio_qty": 1
+          },
+          {
+            "symbol": "AMD260904P00452500",
+            "side": "BUY",
+            "ratio_qty": 1
+          }
+        ]
+      }
+    },
+    "realized_pnl": {
+      "available": true,
+      "entry_price": 2.48,
+      "exit_price": 1.94,
+      "contracts": 4,
+      "realized_pnl": -216.0,
+      "realized_pnl_percent": -21.77
+    },
+    "closed_at": "2026-09-03T09:53:06.769277+00:00"
+  },
+  {
+    "id": "c0212f95-9671-417e-b86e-911b0d1901b2",
+    "created_at": "2026-09-03T07:59:16.816323+00:00",
+    "updated_at": "2026-09-03T07:59:16.816323+00:00",
+    "mode": "MANUAL",
+    "symbol": "SPY",
+    "status": "WAIT",
+    "stage": "OPPORTUNITY_ENGINE",
+    "message": "No sufficiently aligned trading opportunity detected",
+    "direction": "NEUTRAL",
+    "strategy": null,
+    "opportunity": {
+      "symbol": "SPY",
+      "direction": "NEUTRAL",
+      "action": "WAIT",
+      "strategy": null,
+      "reasons": [
+        "1H trend: NEUTRAL",
+        "15M trend: BULLISH",
+        "15M momentum: BULLISH_CONFIRMED",
+        "Conditions are not sufficiently aligned for a trade candidate"
+      ]
+    },
+    "thesis": {},
+    "fragility_score": null,
+    "fragility_classification": null,
+    "fragility_decision": null,
+    "fragility": {},
+    "contracts": {},
+    "pricing": {},
+    "risk": {},
+    "approved_contracts": null,
+    "execution": {},
+    "execution_status": "WAIT",
+    "position_status": "NO_POSITION",
+    "position_decision": "NOT_APPLICABLE",
+    "position_history": [],
+    "autonomous": {}
+  },
+  {
+    "id": "46787441-424e-48f8-92a4-7a05b4d94763",
+    "created_at": "2026-09-03T08:14:36.889611+00:00",
+    "updated_at": "2026-09-03T09:53:09.863554+00:00",
+    "mode": "AUTONOMOUS",
+    "symbol": "AMD",
+    "status": "DRY_RUN",
+    "stage": "EXECUTION_COMPLETE",
+    "message": null,
+    "direction": "BEARISH",
+    "strategy": "BEAR_PUT_SPREAD",
+    "opportunity": {
+      "symbol": "AMD",
+      "direction": "BEARISH",
+      "action": "CANDIDATE",
+      "strategy": "BEAR_PUT_SPREAD",
+      "reasons": [
+        "1H trend is bearish",
+        "15M trend confirms bearish direction",
+        "15M RSI confirms bearish momentum"
+      ]
+    },
+    "thesis": {
+      "symbol": "AMD",
+      "direction": "BEARISH",
+      "confidence": "MEDIUM",
+      "supporting_evidence": [
+        "Hourly close of 456.51 is below both the 1H EMA_20 (460.31) and EMA_50 (466.23), indicating an established medium-term downtrend.",
+        "Entry close of 456.51 is positioned below the 15M EMA_20 (457.0) and EMA_50 (458.69), aligning the short-term trend with the hourly trend.",
+        "RSI remains below 50 on both hourly (41.99) and entry (44.61) timeframes, confirming bearish momentum.",
+        "A highly elevated entry volume ratio of 5.34 suggests significant institutional or market participation in the current price action."
+      ],
+      "contradictions": [
+        "The entry RSI of 44.61 is higher than the hourly RSI of 41.99 despite the identical price of 456.51, reflecting a minor loss of downward momentum.",
+        "The current close of 456.51 is extremely close to the 15M EMA_20 of 457.0, meaning a minor uptick of less than 0.11% invalidates the immediate 15M bearish structure.",
+        "An extreme volume ratio of 5.34 can sometimes signal a capitulation or selling climax rather than a sustainable trend continuation."
+      ],
+      "neutral_scenario": "AMD consolidates in a tight range between 456.00 and 458.00, causing the 15M EMAs to flatten out and the RSI to hover around 50, resulting in an inconclusive momentum profile.",
+      "failure_scenario": "AMD reverses upward, crossing above the 15M EMA_50 of 458.69 and subsequently breaking the 1H EMA_20 of 460.31, which invalidates the bearish momentum and suggests a short-term trend reversal.",
+      "reasoning_summary": "Multiple timeframes show aligned bearish structures and momentum. However, the extreme entry volume ratio of 5.34 presents a risk of capitulation/exhaustion, and the close proximity of the price to the 15M EMA_20 resistance warrants caution, leading to a MEDIUM confidence rating."
+    },
+    "fragility_score": 30,
+    "fragility_classification": "LOW",
+    "fragility_decision": "TRADE",
+    "fragility": {
+      "score": 30,
+      "classification": "LOW",
+      "decision": "TRADE",
+      "override": null,
+      "components": {
+        "trend": 0,
+        "momentum": 0,
+        "volume": 0,
+        "neutral_pressure": 15,
+        "failure_pressure": 10,
+        "volatility": 5
+      }
+    },
+    "contracts": {
+      "strategy": "BEAR_PUT_SPREAD",
+      "symbol": "AMD",
+      "expiration_date": "2026-09-04",
+      "long_leg": {
+        "symbol": "AMD260904P00457500",
+        "strike": 457.5,
+        "side": "BUY",
+        "type": "PUT"
+      },
+      "short_leg": {
+        "symbol": "AMD260904P00452500",
+        "strike": 452.5,
+        "side": "SELL",
+        "type": "PUT"
+      }
+    },
+    "pricing": {
+      "long_leg": {
+        "symbol": "AMD260904P00457500",
+        "bid": 7.39,
+        "ask": 7.58,
+        "mid": 7.48
+      },
+      "short_leg": {
+        "symbol": "AMD260904P00452500",
+        "bid": 5.1,
+        "ask": 5.45,
+        "mid": 5.28
+      },
+      "estimated_debit": 2.48,
+      "estimated_mid_debit": 2.2
+    },
+    "risk": {
+      "status": "APPROVED",
+      "reason_codes": [],
+      "symbol": "AMD",
+      "strategy": "BEAR_PUT_SPREAD",
+      "decision": "TRADE",
+      "account_equity": 100000.0,
+      "start_of_day_equity": 100000.0,
+      "max_trade_risk": 1000.0,
+      "risk_per_spread": 248.0,
+      "requested_contracts": 5,
+      "maximum_contracts": 4,
+      "approved_contracts": 4,
+      "proposed_max_loss": 992.0,
+      "current_portfolio_risk": 0.0,
+      "proposed_portfolio_risk": 992.0,
+      "max_portfolio_risk": 2000.0,
+      "daily_realized_pnl": 0.0,
+      "daily_loss_limit": 2000.0,
+      "buying_power": 400000.0
+    },
+    "approved_contracts": 4,
+    "execution": {
+      "status": "DRY_RUN",
+      "message": "Multi-leg order built but NOT sent to Alpaca",
+      "order": {
+        "strategy": "BEAR_PUT_SPREAD",
+        "symbol": "AMD",
+        "contracts": 4,
+        "limit_price": 2.48,
+        "expiration_date": "2026-09-04",
+        "legs": [
+          {
+            "symbol": "AMD260904P00457500",
+            "side": "BUY",
+            "ratio_qty": 1
+          },
+          {
+            "symbol": "AMD260904P00452500",
+            "side": "SELL",
+            "ratio_qty": 1
+          }
+        ]
+      }
+    },
+    "execution_status": "DRY_RUN",
+    "position_status": "CLOSED",
+    "position_decision": "EXIT",
+    "position_history": [
+      {
+        "timestamp": "2026-09-03T09:35:40.234962+00:00",
+        "decision": "HOLD",
+        "reason": "Original trade thesis remains structurally valid.",
+        "details": {
+          "opportunity": {
+            "symbol": "AMD",
+            "direction": "BEARISH",
+            "action": "CANDIDATE",
+            "strategy": "BEAR_PUT_SPREAD",
+            "reasons": [
+              "1H trend is bearish",
+              "15M trend confirms bearish direction",
+              "15M RSI confirms bearish momentum"
+            ]
+          },
+          "fragility": {
+            "score": 30,
+            "classification": "LOW",
+            "decision": "TRADE",
+            "override": null,
+            "components": {
+              "trend": 0,
+              "momentum": 0,
+              "volume": 0,
+              "neutral_pressure": 15,
+              "failure_pressure": 10,
+              "volatility": 5
+            }
+          },
+          "thesis_valid": true,
+          "pricing": {
+            "long_leg": {
+              "symbol": "AMD260904P00457500",
+              "bid": 7.39,
+              "ask": 7.58,
+              "mid": 7.48
+            },
+            "short_leg": {
+              "symbol": "AMD260904P00452500",
+              "bid": 5.1,
+              "ask": 5.45,
+              "mid": 5.28
+            },
+            "estimated_debit": 2.48,
+            "estimated_mid_debit": 2.2,
+            "estimated_exit_credit": 1.94
+          },
+          "pnl": {
+            "available": true,
+            "entry_price": 2.48,
+            "current_mark": 2.2,
+            "contracts": 4,
+            "unrealized_pnl": -112.0,
+            "unrealized_pnl_percent": -11.29
+          }
+        }
+      },
+      {
+        "timestamp": "2026-09-03T09:53:09.803793+00:00",
+        "decision": "EXIT",
+        "reason": "Structural fragility reached the critical exit threshold.",
+        "details": {
+          "opportunity": {
+            "symbol": "AMD",
+            "direction": "BEARISH",
+            "action": "CANDIDATE",
+            "strategy": "BEAR_PUT_SPREAD",
+            "reasons": [
+              "1H trend is bearish",
+              "15M trend confirms bearish direction",
+              "15M RSI confirms bearish momentum"
+            ]
+          },
+          "fragility": {
+            "score": 30,
+            "classification": "LOW",
+            "decision": "TRADE",
+            "override": null,
+            "components": {
+              "trend": 0,
+              "momentum": 0,
+              "volume": 0,
+              "neutral_pressure": 15,
+              "failure_pressure": 10,
+              "volatility": 5
+            }
+          },
+          "pricing": {
+            "long_leg": {
+              "symbol": "AMD260904P00457500",
+              "bid": 7.39,
+              "ask": 7.58,
+              "mid": 7.48
+            },
+            "short_leg": {
+              "symbol": "AMD260904P00452500",
+              "bid": 5.1,
+              "ask": 5.45,
+              "mid": 5.28
+            },
+            "estimated_debit": 2.48,
+            "estimated_mid_debit": 2.2,
+            "estimated_exit_credit": 1.94
+          },
+          "pnl": {
+            "available": true,
+            "entry_price": 2.48,
+            "current_mark": 2.2,
+            "contracts": 4,
+            "unrealized_pnl": -112.0,
+            "unrealized_pnl_percent": -11.29
+          },
+          "realized_pnl": {
+            "available": true,
+            "entry_price": 2.48,
+            "exit_price": 1.94,
+            "contracts": 4,
+            "realized_pnl": -216.0,
+            "realized_pnl_percent": -21.77
+          },
+          "thesis_valid": true,
+          "exit_execution": {
+            "status": "DRY_RUN",
+            "message": "Closing multi-leg order built but NOT sent to Alpaca",
+            "order": {
+              "action": "CLOSE_POSITION",
+              "strategy": "BEAR_PUT_SPREAD",
+              "symbol": "AMD",
+              "contracts": 4,
+              "limit_price": 1.94,
+              "legs": [
+                {
+                  "symbol": "AMD260904P00457500",
+                  "side": "SELL",
+                  "ratio_qty": 1
+                },
+                {
+                  "symbol": "AMD260904P00452500",
+                  "side": "BUY",
+                  "ratio_qty": 1
+                }
+              ]
+            }
+          }
+        }
+      }
+    ],
+    "autonomous": {
+      "selected_symbol": "AMD",
+      "scan_summary": {
+        "scanned_count": 8,
+        "candidate_count": 1
+      },
+      "scanned_count": 8,
+      "candidate_count": 1
+    },
+    "exit_execution": {
+      "status": "DRY_RUN",
+      "message": "Closing multi-leg order built but NOT sent to Alpaca",
+      "order": {
+        "action": "CLOSE_POSITION",
+        "strategy": "BEAR_PUT_SPREAD",
+        "symbol": "AMD",
+        "contracts": 4,
+        "limit_price": 1.94,
+        "legs": [
+          {
+            "symbol": "AMD260904P00457500",
+            "side": "SELL",
+            "ratio_qty": 1
+          },
+          {
+            "symbol": "AMD260904P00452500",
+            "side": "BUY",
+            "ratio_qty": 1
+          }
+        ]
+      }
+    },
+    "realized_pnl": {
+      "available": true,
+      "entry_price": 2.48,
+      "exit_price": 1.94,
+      "contracts": 4,
+      "realized_pnl": -216.0,
+      "realized_pnl_percent": -21.77
+    },
+    "closed_at": "2026-09-03T09:53:09.853627+00:00"
+  },
+  {
+    "id": "cda7fe03-16a9-42b4-aef8-ef860dd867b9",
+    "created_at": "2026-09-03T08:16:34.764909+00:00",
+    "updated_at": "2026-09-03T09:53:12.864812+00:00",
+    "mode": "AUTONOMOUS",
+    "symbol": "AMD",
+    "status": "DRY_RUN",
+    "stage": "EXECUTION_COMPLETE",
+    "message": null,
+    "direction": "BEARISH",
+    "strategy": "BEAR_PUT_SPREAD",
+    "opportunity": {
+      "symbol": "AMD",
+      "direction": "BEARISH",
+      "action": "CANDIDATE",
+      "strategy": "BEAR_PUT_SPREAD",
+      "reasons": [
+        "1H trend is bearish",
+        "15M trend confirms bearish direction",
+        "15M RSI confirms bearish momentum"
+      ]
+    },
+    "thesis": {
+      "symbol": "AMD",
+      "direction": "BEARISH",
+      "confidence": "MEDIUM",
+      "supporting_evidence": [
+        "Price of 456.51 is below both the hourly 20 EMA (460.31) and 50 EMA (466.23), confirming a mid-term downtrend.",
+        "Entry price is aligned below the short-term 20 EMA (457.0) and 50 EMA (458.69), validating a short-term bearish structure.",
+        "An exceptional spike in the entry volume ratio (5.34) confirms strong selling participation at the current level.",
+        "RSI on both hourly (41.99) and entry (44.61) timeframes remains in bearish territory (< 50) without being oversold (< 30)."
+      ],
+      "contradictions": [
+        "The entry close (456.51) is extremely close to the short-term 20 EMA (457.0), which may act as immediate dynamic support and trigger a minor bounce.",
+        "Entry RSI (44.61) is higher than the hourly RSI (41.99), indicating a minor loss in downward momentum on the faster timeframe."
+      ],
+      "neutral_scenario": "AMD's price remains rangebound around $456.50, and the volume spike fails to produce directional follow-through, leading to horizontal consolidation and decay.",
+      "failure_scenario": "The high volume at entry represents buying absorption rather than selling pressure, leading to a rapid short squeeze that breaks above the short-term 50 EMA (458.69) and challenges the hourly 20 EMA (460.31).",
+      "reasoning_summary": "The trade is strongly supported by aligned bearish structures on both 1H and 15M timeframes, complemented by a massive surge in entry volume. However, because the entry price is resting right near the short-term EMA and RSI momentum is showing a minor upward tilt, there is a risk of a short-term bounce, justifying a Medium confidence rating and a defined-risk bearish strategy."
+    },
+    "fragility_score": 25,
+    "fragility_classification": "LOW",
+    "fragility_decision": "TRADE",
+    "fragility": {
+      "score": 25,
+      "classification": "LOW",
+      "decision": "TRADE",
+      "override": null,
+      "components": {
+        "trend": 0,
+        "momentum": 0,
+        "volume": 0,
+        "neutral_pressure": 10,
+        "failure_pressure": 10,
+        "volatility": 5
+      }
+    },
+    "contracts": {
+      "strategy": "BEAR_PUT_SPREAD",
+      "symbol": "AMD",
+      "expiration_date": "2026-09-04",
+      "long_leg": {
+        "symbol": "AMD260904P00457500",
+        "strike": 457.5,
+        "side": "BUY",
+        "type": "PUT"
+      },
+      "short_leg": {
+        "symbol": "AMD260904P00452500",
+        "strike": 452.5,
+        "side": "SELL",
+        "type": "PUT"
+      }
+    },
+    "pricing": {
+      "long_leg": {
+        "symbol": "AMD260904P00457500",
+        "bid": 7.39,
+        "ask": 7.58,
+        "mid": 7.48
+      },
+      "short_leg": {
+        "symbol": "AMD260904P00452500",
+        "bid": 5.1,
+        "ask": 5.45,
+        "mid": 5.28
+      },
+      "estimated_debit": 2.48,
+      "estimated_mid_debit": 2.2
+    },
+    "risk": {
+      "status": "APPROVED",
+      "reason_codes": [],
+      "symbol": "AMD",
+      "strategy": "BEAR_PUT_SPREAD",
+      "decision": "TRADE",
+      "account_equity": 100000.0,
+      "start_of_day_equity": 100000.0,
+      "max_trade_risk": 1000.0,
+      "risk_per_spread": 248.0,
+      "requested_contracts": 5,
+      "maximum_contracts": 4,
+      "approved_contracts": 4,
+      "proposed_max_loss": 992.0,
+      "current_portfolio_risk": 0.0,
+      "proposed_portfolio_risk": 992.0,
+      "max_portfolio_risk": 2000.0,
+      "daily_realized_pnl": 0.0,
+      "daily_loss_limit": 2000.0,
+      "buying_power": 400000.0
+    },
+    "approved_contracts": 4,
+    "execution": {
+      "status": "DRY_RUN",
+      "message": "Multi-leg order built but NOT sent to Alpaca",
+      "order": {
+        "strategy": "BEAR_PUT_SPREAD",
+        "symbol": "AMD",
+        "contracts": 4,
+        "limit_price": 2.48,
+        "expiration_date": "2026-09-04",
+        "legs": [
+          {
+            "symbol": "AMD260904P00457500",
+            "side": "BUY",
+            "ratio_qty": 1
+          },
+          {
+            "symbol": "AMD260904P00452500",
+            "side": "SELL",
+            "ratio_qty": 1
+          }
+        ]
+      }
+    },
+    "execution_status": "DRY_RUN",
+    "position_status": "CLOSED",
+    "position_decision": "EXIT",
+    "position_history": [
+      {
+        "timestamp": "2026-09-03T09:35:43.168211+00:00",
+        "decision": "HOLD",
+        "reason": "Original trade thesis remains structurally valid.",
+        "details": {
+          "opportunity": {
+            "symbol": "AMD",
+            "direction": "BEARISH",
+            "action": "CANDIDATE",
+            "strategy": "BEAR_PUT_SPREAD",
+            "reasons": [
+              "1H trend is bearish",
+              "15M trend confirms bearish direction",
+              "15M RSI confirms bearish momentum"
+            ]
+          },
+          "fragility": {
+            "score": 25,
+            "classification": "LOW",
+            "decision": "TRADE",
+            "override": null,
+            "components": {
+              "trend": 0,
+              "momentum": 0,
+              "volume": 0,
+              "neutral_pressure": 10,
+              "failure_pressure": 10,
+              "volatility": 5
+            }
+          },
+          "thesis_valid": true,
+          "pricing": {
+            "long_leg": {
+              "symbol": "AMD260904P00457500",
+              "bid": 7.39,
+              "ask": 7.58,
+              "mid": 7.48
+            },
+            "short_leg": {
+              "symbol": "AMD260904P00452500",
+              "bid": 5.1,
+              "ask": 5.45,
+              "mid": 5.28
+            },
+            "estimated_debit": 2.48,
+            "estimated_mid_debit": 2.2,
+            "estimated_exit_credit": 1.94
+          },
+          "pnl": {
+            "available": true,
+            "entry_price": 2.48,
+            "current_mark": 2.2,
+            "contracts": 4,
+            "unrealized_pnl": -112.0,
+            "unrealized_pnl_percent": -11.29
+          }
+        }
+      },
+      {
+        "timestamp": "2026-09-03T09:53:12.825820+00:00",
+        "decision": "EXIT",
+        "reason": "Structural fragility reached the critical exit threshold.",
+        "details": {
+          "opportunity": {
+            "symbol": "AMD",
+            "direction": "BEARISH",
+            "action": "CANDIDATE",
+            "strategy": "BEAR_PUT_SPREAD",
+            "reasons": [
+              "1H trend is bearish",
+              "15M trend confirms bearish direction",
+              "15M RSI confirms bearish momentum"
+            ]
+          },
+          "fragility": {
+            "score": 25,
+            "classification": "LOW",
+            "decision": "TRADE",
+            "override": null,
+            "components": {
+              "trend": 0,
+              "momentum": 0,
+              "volume": 0,
+              "neutral_pressure": 10,
+              "failure_pressure": 10,
+              "volatility": 5
+            }
+          },
+          "pricing": {
+            "long_leg": {
+              "symbol": "AMD260904P00457500",
+              "bid": 7.39,
+              "ask": 7.58,
+              "mid": 7.48
+            },
+            "short_leg": {
+              "symbol": "AMD260904P00452500",
+              "bid": 5.1,
+              "ask": 5.45,
+              "mid": 5.28
+            },
+            "estimated_debit": 2.48,
+            "estimated_mid_debit": 2.2,
+            "estimated_exit_credit": 1.94
+          },
+          "pnl": {
+            "available": true,
+            "entry_price": 2.48,
+            "current_mark": 2.2,
+            "contracts": 4,
+            "unrealized_pnl": -112.0,
+            "unrealized_pnl_percent": -11.29
+          },
+          "realized_pnl": {
+            "available": true,
+            "entry_price": 2.48,
+            "exit_price": 1.94,
+            "contracts": 4,
+            "realized_pnl": -216.0,
+            "realized_pnl_percent": -21.77
+          },
+          "thesis_valid": true,
+          "exit_execution": {
+            "status": "DRY_RUN",
+            "message": "Closing multi-leg order built but NOT sent to Alpaca",
+            "order": {
+              "action": "CLOSE_POSITION",
+              "strategy": "BEAR_PUT_SPREAD",
+              "symbol": "AMD",
+              "contracts": 4,
+              "limit_price": 1.94,
+              "legs": [
+                {
+                  "symbol": "AMD260904P00457500",
+                  "side": "SELL",
+                  "ratio_qty": 1
+                },
+                {
+                  "symbol": "AMD260904P00452500",
+                  "side": "BUY",
+                  "ratio_qty": 1
+                }
+              ]
+            }
+          }
+        }
+      }
+    ],
+    "autonomous": {
+      "selected_symbol": "AMD",
+      "scan_summary": {
+        "scanned_count": 8,
+        "candidate_count": 1
+      },
+      "scanned_count": 8,
+      "candidate_count": 1
+    },
+    "exit_execution": {
+      "status": "DRY_RUN",
+      "message": "Closing multi-leg order built but NOT sent to Alpaca",
+      "order": {
+        "action": "CLOSE_POSITION",
+        "strategy": "BEAR_PUT_SPREAD",
+        "symbol": "AMD",
+        "contracts": 4,
+        "limit_price": 1.94,
+        "legs": [
+          {
+            "symbol": "AMD260904P00457500",
+            "side": "SELL",
+            "ratio_qty": 1
+          },
+          {
+            "symbol": "AMD260904P00452500",
+            "side": "BUY",
+            "ratio_qty": 1
+          }
+        ]
+      }
+    },
+    "realized_pnl": {
+      "available": true,
+      "entry_price": 2.48,
+      "exit_price": 1.94,
+      "contracts": 4,
+      "realized_pnl": -216.0,
+      "realized_pnl_percent": -21.77
+    },
+    "closed_at": "2026-09-03T09:53:12.854594+00:00"
+  },
+  {
+    "id": "9b839858-440e-438b-a228-66923efb463a",
+    "created_at": "2026-09-03T08:27:17.056161+00:00",
+    "updated_at": "2026-09-03T08:27:17.056161+00:00",
+    "mode": "MANUAL",
+    "symbol": "QQQ",
+    "status": "WAIT",
+    "stage": "OPPORTUNITY_ENGINE",
+    "message": "No sufficiently aligned trading opportunity detected",
+    "direction": "NEUTRAL",
+    "strategy": null,
+    "opportunity": {
+      "symbol": "QQQ",
+      "direction": "NEUTRAL",
+      "action": "WAIT",
+      "strategy": null,
+      "reasons": [
+        "1H trend: BEARISH",
+        "15M trend: NEUTRAL",
+        "15M momentum: OVEREXTENDED_BULLISH",
+        "Conditions are not sufficiently aligned for a trade candidate"
+      ]
+    },
+    "thesis": {},
+    "fragility_score": null,
+    "fragility_classification": null,
+    "fragility_decision": null,
+    "fragility": {},
+    "contracts": {},
+    "pricing": {},
+    "risk": {},
+    "approved_contracts": null,
+    "execution": {},
+    "execution_status": "WAIT",
+    "position_status": "NO_POSITION",
+    "position_decision": "NOT_APPLICABLE",
+    "position_history": [],
+    "autonomous": {}
+  },
+  {
+    "id": "e82e558d-7e67-458f-8729-db851179d5db",
+    "created_at": "2026-09-03T08:27:55.395988+00:00",
+    "updated_at": "2026-09-03T09:53:15.956071+00:00",
+    "mode": "AUTONOMOUS",
+    "symbol": "AMD",
+    "status": "DRY_RUN",
+    "stage": "EXECUTION_COMPLETE",
+    "message": null,
+    "direction": "BEARISH",
+    "strategy": "BEAR_PUT_SPREAD",
+    "opportunity": {
+      "symbol": "AMD",
+      "direction": "BEARISH",
+      "action": "CANDIDATE",
+      "strategy": "BEAR_PUT_SPREAD",
+      "reasons": [
+        "1H trend is bearish",
+        "15M trend confirms bearish direction",
+        "15M RSI confirms bearish momentum"
+      ]
+    },
+    "thesis": {
+      "symbol": "AMD",
+      "direction": "BEARISH",
+      "confidence": "MEDIUM",
+      "supporting_evidence": [
+        "Hourly price of 456.51 is trading below both the 20 EMA (460.31) and 50 EMA (466.23), confirming a bearish trend.",
+        "Entry price of 456.51 is below the 15M 20 EMA (457.0) and 50 EMA (458.69), showing aligned short-term bearish structure.",
+        "Hourly RSI (41.99) and entry RSI (44.61) are both below 50, indicating consistent downward momentum.",
+        "The entry volume ratio is highly elevated at 5.34, suggesting strong selling pressure and participation."
+      ],
+      "contradictions": [
+        "The entry RSI (44.61) is slightly higher than the hourly RSI (41.99), indicating a minor loss of downward momentum in the very short term.",
+        "The current close of 456.51 is very close to the 15M 20 EMA of 457.0, leaving little margin for error before a short-term trend shift."
+      ],
+      "neutral_scenario": "The price consolidates sideways between 456.00 and 458.50, causing the entry RSI to drift toward 50 and the volume spike to subside without clear directional progress.",
+      "failure_scenario": "The price reverses and breaks above the hourly 20 EMA of 460.31, shifting momentum to the upside and invalidating the bearish trend structure.",
+      "reasoning_summary": "The bearish outlook is structurally sound given that both hourly and short-term timeframes exhibit price trading below key EMAs, supported by a significant volume spike. However, the slight rise in entry RSI and proximity to immediate 15M resistance warrants a Medium confidence level."
+    },
+    "fragility_score": 25,
+    "fragility_classification": "LOW",
+    "fragility_decision": "TRADE",
+    "fragility": {
+      "score": 25,
+      "classification": "LOW",
+      "decision": "TRADE",
+      "override": null,
+      "components": {
+        "trend": 0,
+        "momentum": 0,
+        "volume": 0,
+        "neutral_pressure": 10,
+        "failure_pressure": 10,
+        "volatility": 5
+      }
+    },
+    "contracts": {
+      "strategy": "BEAR_PUT_SPREAD",
+      "symbol": "AMD",
+      "expiration_date": "2026-09-04",
+      "long_leg": {
+        "symbol": "AMD260904P00457500",
+        "strike": 457.5,
+        "side": "BUY",
+        "type": "PUT"
+      },
+      "short_leg": {
+        "symbol": "AMD260904P00452500",
+        "strike": 452.5,
+        "side": "SELL",
+        "type": "PUT"
+      }
+    },
+    "pricing": {
+      "long_leg": {
+        "symbol": "AMD260904P00457500",
+        "bid": 7.39,
+        "ask": 7.58,
+        "mid": 7.48
+      },
+      "short_leg": {
+        "symbol": "AMD260904P00452500",
+        "bid": 5.1,
+        "ask": 5.45,
+        "mid": 5.28
+      },
+      "estimated_debit": 2.48,
+      "estimated_mid_debit": 2.2
+    },
+    "risk": {
+      "status": "APPROVED",
+      "reason_codes": [],
+      "symbol": "AMD",
+      "strategy": "BEAR_PUT_SPREAD",
+      "decision": "TRADE",
+      "account_equity": 100000.0,
+      "start_of_day_equity": 100000.0,
+      "max_trade_risk": 1000.0,
+      "risk_per_spread": 248.0,
+      "requested_contracts": 5,
+      "maximum_contracts": 4,
+      "approved_contracts": 4,
+      "proposed_max_loss": 992.0,
+      "current_portfolio_risk": 0.0,
+      "proposed_portfolio_risk": 992.0,
+      "max_portfolio_risk": 2000.0,
+      "daily_realized_pnl": 0.0,
+      "daily_loss_limit": 2000.0,
+      "buying_power": 400000.0
+    },
+    "approved_contracts": 4,
+    "execution": {
+      "status": "DRY_RUN",
+      "message": "Multi-leg order built but NOT sent to Alpaca",
+      "order": {
+        "strategy": "BEAR_PUT_SPREAD",
+        "symbol": "AMD",
+        "contracts": 4,
+        "limit_price": 2.48,
+        "expiration_date": "2026-09-04",
+        "legs": [
+          {
+            "symbol": "AMD260904P00457500",
+            "side": "BUY",
+            "ratio_qty": 1
+          },
+          {
+            "symbol": "AMD260904P00452500",
+            "side": "SELL",
+            "ratio_qty": 1
+          }
+        ]
+      }
+    },
+    "execution_status": "DRY_RUN",
+    "position_status": "CLOSED",
+    "position_decision": "EXIT",
+    "position_history": [
+      {
+        "timestamp": "2026-09-03T09:35:46.351608+00:00",
+        "decision": "HOLD",
+        "reason": "Original trade thesis remains structurally valid.",
+        "details": {
+          "opportunity": {
+            "symbol": "AMD",
+            "direction": "BEARISH",
+            "action": "CANDIDATE",
+            "strategy": "BEAR_PUT_SPREAD",
+            "reasons": [
+              "1H trend is bearish",
+              "15M trend confirms bearish direction",
+              "15M RSI confirms bearish momentum"
+            ]
+          },
+          "fragility": {
+            "score": 25,
+            "classification": "LOW",
+            "decision": "TRADE",
+            "override": null,
+            "components": {
+              "trend": 0,
+              "momentum": 0,
+              "volume": 0,
+              "neutral_pressure": 10,
+              "failure_pressure": 10,
+              "volatility": 5
+            }
+          },
+          "thesis_valid": true,
+          "pricing": {
+            "long_leg": {
+              "symbol": "AMD260904P00457500",
+              "bid": 7.39,
+              "ask": 7.58,
+              "mid": 7.48
+            },
+            "short_leg": {
+              "symbol": "AMD260904P00452500",
+              "bid": 5.1,
+              "ask": 5.45,
+              "mid": 5.28
+            },
+            "estimated_debit": 2.48,
+            "estimated_mid_debit": 2.2,
+            "estimated_exit_credit": 1.94
+          },
+          "pnl": {
+            "available": true,
+            "entry_price": 2.48,
+            "current_mark": 2.2,
+            "contracts": 4,
+            "unrealized_pnl": -112.0,
+            "unrealized_pnl_percent": -11.29
+          }
+        }
+      },
+      {
+        "timestamp": "2026-09-03T09:53:15.889294+00:00",
+        "decision": "EXIT",
+        "reason": "Structural fragility reached the critical exit threshold.",
+        "details": {
+          "opportunity": {
+            "symbol": "AMD",
+            "direction": "BEARISH",
+            "action": "CANDIDATE",
+            "strategy": "BEAR_PUT_SPREAD",
+            "reasons": [
+              "1H trend is bearish",
+              "15M trend confirms bearish direction",
+              "15M RSI confirms bearish momentum"
+            ]
+          },
+          "fragility": {
+            "score": 25,
+            "classification": "LOW",
+            "decision": "TRADE",
+            "override": null,
+            "components": {
+              "trend": 0,
+              "momentum": 0,
+              "volume": 0,
+              "neutral_pressure": 10,
+              "failure_pressure": 10,
+              "volatility": 5
+            }
+          },
+          "pricing": {
+            "long_leg": {
+              "symbol": "AMD260904P00457500",
+              "bid": 7.39,
+              "ask": 7.58,
+              "mid": 7.48
+            },
+            "short_leg": {
+              "symbol": "AMD260904P00452500",
+              "bid": 5.1,
+              "ask": 5.45,
+              "mid": 5.28
+            },
+            "estimated_debit": 2.48,
+            "estimated_mid_debit": 2.2,
+            "estimated_exit_credit": 1.94
+          },
+          "pnl": {
+            "available": true,
+            "entry_price": 2.48,
+            "current_mark": 2.2,
+            "contracts": 4,
+            "unrealized_pnl": -112.0,
+            "unrealized_pnl_percent": -11.29
+          },
+          "realized_pnl": {
+            "available": true,
+            "entry_price": 2.48,
+            "exit_price": 1.94,
+            "contracts": 4,
+            "realized_pnl": -216.0,
+            "realized_pnl_percent": -21.77
+          },
+          "thesis_valid": true,
+          "exit_execution": {
+            "status": "DRY_RUN",
+            "message": "Closing multi-leg order built but NOT sent to Alpaca",
+            "order": {
+              "action": "CLOSE_POSITION",
+              "strategy": "BEAR_PUT_SPREAD",
+              "symbol": "AMD",
+              "contracts": 4,
+              "limit_price": 1.94,
+              "legs": [
+                {
+                  "symbol": "AMD260904P00457500",
+                  "side": "SELL",
+                  "ratio_qty": 1
+                },
+                {
+                  "symbol": "AMD260904P00452500",
+                  "side": "BUY",
+                  "ratio_qty": 1
+                }
+              ]
+            }
+          }
+        }
+      }
+    ],
+    "autonomous": {
+      "selected_symbol": "AMD",
+      "scan_summary": {
+        "scanned_count": 8,
+        "candidate_count": 1
+      },
+      "scanned_count": 8,
+      "candidate_count": 1
+    },
+    "exit_execution": {
+      "status": "DRY_RUN",
+      "message": "Closing multi-leg order built but NOT sent to Alpaca",
+      "order": {
+        "action": "CLOSE_POSITION",
+        "strategy": "BEAR_PUT_SPREAD",
+        "symbol": "AMD",
+        "contracts": 4,
+        "limit_price": 1.94,
+        "legs": [
+          {
+            "symbol": "AMD260904P00457500",
+            "side": "SELL",
+            "ratio_qty": 1
+          },
+          {
+            "symbol": "AMD260904P00452500",
+            "side": "BUY",
+            "ratio_qty": 1
+          }
+        ]
+      }
+    },
+    "realized_pnl": {
+      "available": true,
+      "entry_price": 2.48,
+      "exit_price": 1.94,
+      "contracts": 4,
+      "realized_pnl": -216.0,
+      "realized_pnl_percent": -21.77
+    },
+    "closed_at": "2026-09-03T09:53:15.945729+00:00"
+  },
+  {
+    "id": "7108176c-6cb9-4715-bb3f-df2e2a81e41d",
+    "created_at": "2026-09-03T08:50:02.210639+00:00",
+    "updated_at": "2026-09-03T08:50:02.210639+00:00",
+    "mode": "MANUAL",
+    "symbol": "QQQ",
+    "status": "WAIT",
+    "stage": "OPPORTUNITY_ENGINE",
+    "message": "No sufficiently aligned trading opportunity detected.",
+    "direction": "NEUTRAL",
+    "strategy": null,
+    "opportunity": {
+      "symbol": "QQQ",
+      "direction": "NEUTRAL",
+      "action": "WAIT",
+      "strategy": null,
+      "reasons": [
+        "1H trend: BEARISH",
+        "15M trend: NEUTRAL",
+        "15M momentum: OVEREXTENDED_BULLISH",
+        "Conditions are not sufficiently aligned for a trade candidate"
+      ]
+    },
+    "thesis": {},
+    "fragility_score": null,
+    "fragility_classification": null,
+    "fragility_decision": null,
+    "fragility": {},
+    "contracts": {},
+    "pricing": {},
+    "risk": {},
+    "approved_contracts": null,
+    "execution": {},
+    "execution_status": "WAIT",
+    "position_status": "NO_POSITION",
+    "position_decision": "NOT_APPLICABLE",
+    "position_history": [],
+    "autonomous": {}
+  },
+  {
+    "id": "2114bffa-81cf-4c30-9209-f9763d82e9c9",
+    "created_at": "2026-09-03T08:51:13.933026+00:00",
+    "updated_at": "2026-09-03T08:51:13.933026+00:00",
+    "mode": "AUTONOMOUS",
+    "symbol": "AMD",
+    "status": "REJECTED",
+    "stage": "RISK_GOVERNOR",
+    "message": "Trade was not approved by the Risk Governor.",
+    "direction": "BEARISH",
+    "strategy": "BEAR_PUT_SPREAD",
+    "opportunity": {
+      "symbol": "AMD",
+      "direction": "BEARISH",
+      "action": "CANDIDATE",
+      "strategy": "BEAR_PUT_SPREAD",
+      "reasons": [
+        "1H trend is bearish",
+        "15M trend confirms bearish direction",
+        "15M RSI confirms bearish momentum"
+      ]
+    },
+    "thesis": {
+      "symbol": "AMD",
+      "direction": "BEARISH",
+      "confidence": "MEDIUM",
+      "supporting_evidence": [
+        "Price of 456.51 is below both the 1H EMA_20 (460.31) and EMA_50 (466.23), indicating a sustained hourly downtrend.",
+        "Price is below the 15M entry EMA_20 (457.0) and EMA_50 (458.69), confirming near-term bearish alignment.",
+        "Both 1H RSI (41.99) and 15M RSI (44.61) are under 50, supporting a bearish momentum regime that is not yet extremely oversold.",
+        "Extremely high entry volume ratio of 5.34 indicates strong participation and momentum behind recent price action."
+      ],
+      "contradictions": [
+        "15M RSI (44.61) is higher than 1H RSI (41.99), indicating a potential loss of short-term downward momentum or a minor bullish divergence.",
+        "An entry volume ratio spike of 5.34 can sometimes signal a selling climax or exhaustion rather than a sustainable continuation.",
+        "The current price of 456.51 is hovering very close to the 15M EMA_20 (457.0), presenting a risk of an imminent mean reversion bounce."
+      ],
+      "neutral_scenario": "AMD consolidates sideways near the current 456.51 level, with the 15M RSI grinding toward 50 and volume contracting back to baseline, causing option premium decay without direction.",
+      "failure_scenario": "AMD price breaks above the 15M EMA_50 of 458.69 and proceeds to reclaim the 1H EMA_20 of 460.31 on high volume, shifting both short-term RSI values above 50.",
+      "reasoning_summary": "AMD exhibits aligned bearish structures across both the 1H and 15M timeframes, with prices trading below key exponential moving averages. However, the massive volume spike at entry and the slightly higher short-term RSI introduce risks of seller exhaustion and near-term mean reversion, capping the thesis confidence at Medium."
+    },
+    "fragility_score": 30,
+    "fragility_classification": "LOW",
+    "fragility_decision": "TRADE",
+    "fragility": {
+      "score": 30,
+      "classification": "LOW",
+      "decision": "TRADE",
+      "override": null,
+      "components": {
+        "trend": 0,
+        "momentum": 0,
+        "volume": 0,
+        "neutral_pressure": 15,
+        "failure_pressure": 10,
+        "volatility": 5
+      }
+    },
+    "contracts": {
+      "strategy": "BEAR_PUT_SPREAD",
+      "symbol": "AMD",
+      "expiration_date": "2026-09-04",
+      "long_leg": {
+        "symbol": "AMD260904P00457500",
+        "strike": 457.5,
+        "side": "BUY",
+        "type": "PUT"
+      },
+      "short_leg": {
+        "symbol": "AMD260904P00452500",
+        "strike": 452.5,
+        "side": "SELL",
+        "type": "PUT"
+      }
+    },
+    "pricing": {
+      "long_leg": {
+        "symbol": "AMD260904P00457500",
+        "bid": 7.39,
+        "ask": 7.58,
+        "mid": 7.48
+      },
+      "short_leg": {
+        "symbol": "AMD260904P00452500",
+        "bid": 5.1,
+        "ask": 5.45,
+        "mid": 5.28
+      },
+      "estimated_debit": 2.48,
+      "estimated_mid_debit": 2.2,
+      "estimated_exit_credit": 1.94
+    },
+    "risk": {
+      "status": "REJECTED",
+      "reason_codes": [
+        "MAX_OPEN_POSITIONS_REACHED"
+      ],
+      "approved_contracts": 0
+    },
+    "approved_contracts": 0,
+    "execution": {},
+    "execution_status": "REJECTED",
+    "position_status": "NO_POSITION",
+    "position_decision": "NOT_APPLICABLE",
+    "position_history": [],
+    "autonomous": {
+      "selected_symbol": "AMD",
+      "scan_summary": {
+        "scanned_count": 8,
+        "candidate_count": 1
+      },
+      "scanned_count": 8,
+      "candidate_count": 1
+    }
+  },
+  {
+    "id": "3cbef5bc-9f96-4b5a-83e3-f270a71bd61d",
+    "created_at": "2026-09-03T08:53:45.579179+00:00",
+    "updated_at": "2026-09-03T08:53:45.579179+00:00",
+    "mode": "AUTONOMOUS",
+    "symbol": "AMD",
+    "status": "REJECTED",
+    "stage": "RISK_GOVERNOR",
+    "message": "Trade was not approved by the Risk Governor.",
+    "direction": "BEARISH",
+    "strategy": "BEAR_PUT_SPREAD",
+    "opportunity": {
+      "symbol": "AMD",
+      "direction": "BEARISH",
+      "action": "CANDIDATE",
+      "strategy": "BEAR_PUT_SPREAD",
+      "reasons": [
+        "1H trend is bearish",
+        "15M trend confirms bearish direction",
+        "15M RSI confirms bearish momentum"
+      ]
+    },
+    "thesis": {
+      "symbol": "AMD",
+      "direction": "BEARISH",
+      "confidence": "MEDIUM",
+      "supporting_evidence": [
+        "Hourly close of 456.51 is below the EMA_20 (460.31) and EMA_50 (466.23), confirming a solid larger-timeframe downtrend.",
+        "Entry close of 456.51 is aligned below its EMA_20 (457.0) and EMA_50 (458.69), showing short-term bearish alignment.",
+        "Both hourly RSI (41.99) and entry RSI (44.61) are under 50, indicating persistent bearish momentum with room to move lower before becoming oversold.",
+        "Entry volume ratio is highly elevated at 5.34, suggesting strong participation and validity of the current move."
+      ],
+      "contradictions": [
+        "The entry RSI (44.61) is higher than the hourly RSI (41.99), signaling a minor loss in bearish momentum or a short-term consolidation.",
+        "The current close (456.51) is extremely close to the Entry EMA_20 (457.00), leaving negligible margin for error before a short-term trend invalidation."
+      ],
+      "neutral_scenario": "AMD consolidates tightly between 456.00 and 458.50, causing the entry EMAs to flatten out, volume ratio to decay back to 1.0, and RSI to drift to 50, resulting in an inconclusive directional bias.",
+      "failure_scenario": "AMD price rebounds and breaks above the Entry EMA_50 (458.69) and Hourly EMA_20 (460.31) on high volume, invalidating the bearish trend structure and triggering stop-losses.",
+      "reasoning_summary": "The structural and short-term trends are bearish and supported by an exceptionally high entry volume ratio. However, the thesis is rated MEDIUM confidence because the price is hovering directly below key short-term EMA resistance, and the slight rise in entry RSI suggests potential near-term exhaustion of selling pressure."
+    },
+    "fragility_score": 25,
+    "fragility_classification": "LOW",
+    "fragility_decision": "TRADE",
+    "fragility": {
+      "score": 25,
+      "classification": "LOW",
+      "decision": "TRADE",
+      "override": null,
+      "components": {
+        "trend": 0,
+        "momentum": 0,
+        "volume": 0,
+        "neutral_pressure": 10,
+        "failure_pressure": 10,
+        "volatility": 5
+      }
+    },
+    "contracts": {
+      "strategy": "BEAR_PUT_SPREAD",
+      "symbol": "AMD",
+      "expiration_date": "2026-09-04",
+      "long_leg": {
+        "symbol": "AMD260904P00457500",
+        "strike": 457.5,
+        "side": "BUY",
+        "type": "PUT"
+      },
+      "short_leg": {
+        "symbol": "AMD260904P00452500",
+        "strike": 452.5,
+        "side": "SELL",
+        "type": "PUT"
+      }
+    },
+    "pricing": {
+      "long_leg": {
+        "symbol": "AMD260904P00457500",
+        "bid": 7.39,
+        "ask": 7.58,
+        "mid": 7.48
+      },
+      "short_leg": {
+        "symbol": "AMD260904P00452500",
+        "bid": 5.1,
+        "ask": 5.45,
+        "mid": 5.28
+      },
+      "estimated_debit": 2.48,
+      "estimated_mid_debit": 2.2,
+      "estimated_exit_credit": 1.94
+    },
+    "risk": {
+      "status": "REJECTED",
+      "reason_codes": [
+        "MAX_OPEN_POSITIONS_REACHED"
+      ],
+      "approved_contracts": 0
+    },
+    "approved_contracts": 0,
+    "execution": {},
+    "execution_status": "REJECTED",
+    "position_status": "NO_POSITION",
+    "position_decision": "NOT_APPLICABLE",
+    "position_history": [],
+    "autonomous": {
+      "selected_symbol": "AMD",
+      "scan_summary": {
+        "scanned_count": 8,
+        "candidate_count": 1
+      },
+      "scanned_count": 8,
+      "candidate_count": 1
+    }
+  },
+  {
+    "id": "8523a1c9-7f2a-4629-bf00-aede74fb5a43",
+    "created_at": "2026-09-03T08:53:56.901656+00:00",
+    "updated_at": "2026-09-03T08:53:56.901656+00:00",
+    "mode": "MANUAL",
+    "symbol": "TSLA",
+    "status": "WAIT",
+    "stage": "OPPORTUNITY_ENGINE",
+    "message": "No sufficiently aligned trading opportunity detected.",
+    "direction": "NEUTRAL",
+    "strategy": null,
+    "opportunity": {
+      "symbol": "TSLA",
+      "direction": "NEUTRAL",
+      "action": "WAIT",
+      "strategy": null,
+      "reasons": [
+        "1H trend: BULLISH",
+        "15M trend: NEUTRAL",
+        "15M momentum: BULLISH_CONFIRMED",
+        "Conditions are not sufficiently aligned for a trade candidate"
+      ]
+    },
+    "thesis": {},
+    "fragility_score": null,
+    "fragility_classification": null,
+    "fragility_decision": null,
+    "fragility": {},
+    "contracts": {},
+    "pricing": {},
+    "risk": {},
+    "approved_contracts": null,
+    "execution": {},
+    "execution_status": "WAIT",
+    "position_status": "NO_POSITION",
+    "position_decision": "NOT_APPLICABLE",
+    "position_history": [],
+    "autonomous": {}
+  },
+  {
+    "id": "0bde3dff-de8d-45bc-8953-2f9a72b603f0",
+    "created_at": "2026-09-03T08:54:11.216907+00:00",
+    "updated_at": "2026-09-03T08:54:11.216907+00:00",
+    "mode": "MANUAL",
+    "symbol": "SPY",
+    "status": "WAIT",
+    "stage": "OPPORTUNITY_ENGINE",
+    "message": "No sufficiently aligned trading opportunity detected.",
+    "direction": "NEUTRAL",
+    "strategy": null,
+    "opportunity": {
+      "symbol": "SPY",
+      "direction": "NEUTRAL",
+      "action": "WAIT",
+      "strategy": null,
+      "reasons": [
+        "1H trend: NEUTRAL",
+        "15M trend: BULLISH",
+        "15M momentum: BULLISH_CONFIRMED",
+        "Conditions are not sufficiently aligned for a trade candidate"
+      ]
+    },
+    "thesis": {},
+    "fragility_score": null,
+    "fragility_classification": null,
+    "fragility_decision": null,
+    "fragility": {},
+    "contracts": {},
+    "pricing": {},
+    "risk": {},
+    "approved_contracts": null,
+    "execution": {},
+    "execution_status": "WAIT",
+    "position_status": "NO_POSITION",
+    "position_decision": "NOT_APPLICABLE",
+    "position_history": [],
+    "autonomous": {}
+  },
+  {
+    "id": "5065bc59-d72c-4c2d-acce-b0d73b14f2d2",
+    "created_at": "2026-09-03T09:02:58.474797+00:00",
+    "updated_at": "2026-09-03T09:02:58.474797+00:00",
+    "mode": "MANUAL",
+    "symbol": "QQQ",
+    "status": "WAIT",
+    "stage": "OPPORTUNITY_ENGINE",
+    "message": "No sufficiently aligned trading opportunity detected.",
+    "direction": "NEUTRAL",
+    "strategy": null,
+    "opportunity": {
+      "symbol": "QQQ",
+      "direction": "NEUTRAL",
+      "action": "WAIT",
+      "strategy": null,
+      "reasons": [
+        "1H trend: BEARISH",
+        "15M trend: NEUTRAL",
+        "15M momentum: OVEREXTENDED_BULLISH",
+        "Conditions are not sufficiently aligned for a trade candidate"
+      ]
+    },
+    "thesis": {},
+    "fragility_score": null,
+    "fragility_classification": null,
+    "fragility_decision": null,
+    "fragility": {},
+    "contracts": {},
+    "pricing": {},
+    "risk": {},
+    "approved_contracts": null,
+    "execution": {},
+    "execution_status": "WAIT",
+    "position_status": "NO_POSITION",
+    "position_decision": "NOT_APPLICABLE",
+    "position_history": [],
+    "autonomous": {}
+  },
+  {
+    "id": "84da5674-2c40-4951-9f25-f9f1fa42d67e",
+    "created_at": "2026-09-03T09:03:27.519378+00:00",
+    "updated_at": "2026-09-03T09:03:27.519378+00:00",
+    "mode": "MANUAL",
+    "symbol": "AMD",
+    "status": "REJECTED",
+    "stage": "RISK_GOVERNOR",
+    "message": "Trade was not approved by the Risk Governor.",
+    "direction": "BEARISH",
+    "strategy": "BEAR_PUT_SPREAD",
+    "opportunity": {
+      "symbol": "AMD",
+      "direction": "BEARISH",
+      "action": "CANDIDATE",
+      "strategy": "BEAR_PUT_SPREAD",
+      "reasons": [
+        "1H trend is bearish",
+        "15M trend confirms bearish direction",
+        "15M RSI confirms bearish momentum"
+      ]
+    },
+    "thesis": {
+      "symbol": "AMD",
+      "direction": "BEARISH",
+      "confidence": "MEDIUM",
+      "supporting_evidence": [
+        "The hourly price of 456.51 is below both the EMA 20 (460.31) and EMA 50 (466.23), confirming a primary bearish trend.",
+        "The entry price of 456.51 remains below its short-term EMA 20 (457.0) and EMA 50 (458.69), aligning with the broader downtrend.",
+        "An elevated entry volume ratio of 5.34 indicates strong institutional or retail activity at the current price levels.",
+        "Both hourly (41.99) and entry (44.61) RSI levels are under 50, supporting bearish momentum."
+      ],
+      "contradictions": [
+        "The price remained flat at 456.51 between the hourly and entry timestamps, showing a pause in downward movement.",
+        "The entry RSI (44.61) is higher than the hourly RSI (41.99) despite the price staying flat, indicating a minor loss of downward momentum."
+      ],
+      "neutral_scenario": "AMD enters a consolidation phase around the 456.51 level with declining volume, while the short-term RSI drifts toward 50, making the bearish signal inconclusive.",
+      "failure_scenario": "The price reverses upward and breaks above the entry EMA 20 (457.0) and EMA 50 (458.69), invalidating the short-term bearish structure and pushing back toward the hourly EMA 20 level at 460.31.",
+      "reasoning_summary": "Both the hourly and short-term trends are bearish with prices below key EMAs and RSI below 50. High entry volume suggests strong market interest, but flat price action over the last 45 minutes and a slight uptick in RSI warrant a cautious medium-confidence rating."
+    },
+    "fragility_score": 25,
+    "fragility_classification": "LOW",
+    "fragility_decision": "TRADE",
+    "fragility": {
+      "score": 25,
+      "classification": "LOW",
+      "decision": "TRADE",
+      "override": null,
+      "components": {
+        "trend": 0,
+        "momentum": 0,
+        "volume": 0,
+        "neutral_pressure": 10,
+        "failure_pressure": 10,
+        "volatility": 5
+      }
+    },
+    "contracts": {
+      "strategy": "BEAR_PUT_SPREAD",
+      "symbol": "AMD",
+      "expiration_date": "2026-09-04",
+      "long_leg": {
+        "symbol": "AMD260904P00457500",
+        "strike": 457.5,
+        "side": "BUY",
+        "type": "PUT"
+      },
+      "short_leg": {
+        "symbol": "AMD260904P00452500",
+        "strike": 452.5,
+        "side": "SELL",
+        "type": "PUT"
+      }
+    },
+    "pricing": {
+      "long_leg": {
+        "symbol": "AMD260904P00457500",
+        "bid": 7.39,
+        "ask": 7.58,
+        "mid": 7.48
+      },
+      "short_leg": {
+        "symbol": "AMD260904P00452500",
+        "bid": 5.1,
+        "ask": 5.45,
+        "mid": 5.28
+      },
+      "estimated_debit": 2.48,
+      "estimated_mid_debit": 2.2,
+      "estimated_exit_credit": 1.94
+    },
+    "risk": {
+      "status": "REJECTED",
+      "reason_codes": [
+        "MAX_OPEN_POSITIONS_REACHED"
+      ],
+      "approved_contracts": 0
+    },
+    "approved_contracts": 0,
+    "execution": {},
+    "execution_status": "REJECTED",
+    "position_status": "NO_POSITION",
+    "position_decision": "NOT_APPLICABLE",
+    "position_history": [],
+    "autonomous": {}
+  },
+  {
+    "id": "5c8198cf-c930-4a98-b9d7-3e7c42a69ea8",
+    "created_at": "2026-09-03T09:04:47.369818+00:00",
+    "updated_at": "2026-09-03T09:04:47.369818+00:00",
+    "mode": "MANUAL",
+    "symbol": "TSLA",
+    "status": "WAIT",
+    "stage": "OPPORTUNITY_ENGINE",
+    "message": "No sufficiently aligned trading opportunity detected.",
+    "direction": "NEUTRAL",
+    "strategy": null,
+    "opportunity": {
+      "symbol": "TSLA",
+      "direction": "NEUTRAL",
+      "action": "WAIT",
+      "strategy": null,
+      "reasons": [
+        "1H trend: BULLISH",
+        "15M trend: NEUTRAL",
+        "15M momentum: BULLISH_CONFIRMED",
+        "Conditions are not sufficiently aligned for a trade candidate"
+      ]
+    },
+    "thesis": {},
+    "fragility_score": null,
+    "fragility_classification": null,
+    "fragility_decision": null,
+    "fragility": {},
+    "contracts": {},
+    "pricing": {},
+    "risk": {},
+    "approved_contracts": null,
+    "execution": {},
+    "execution_status": "WAIT",
+    "position_status": "NO_POSITION",
+    "position_decision": "NOT_APPLICABLE",
+    "position_history": [],
+    "autonomous": {}
+  },
+  {
+    "id": "aec2b3b1-6688-4a39-a473-023ed6abef67",
+    "created_at": "2026-09-03T09:05:31.276514+00:00",
+    "updated_at": "2026-09-03T09:05:31.276514+00:00",
+    "mode": "AUTONOMOUS",
+    "symbol": "AMD",
+    "status": "REJECTED",
+    "stage": "RISK_GOVERNOR",
+    "message": "Trade was not approved by the Risk Governor.",
+    "direction": "BEARISH",
+    "strategy": "BEAR_PUT_SPREAD",
+    "opportunity": {
+      "symbol": "AMD",
+      "direction": "BEARISH",
+      "action": "CANDIDATE",
+      "strategy": "BEAR_PUT_SPREAD",
+      "reasons": [
+        "1H trend is bearish",
+        "15M trend confirms bearish direction",
+        "15M RSI confirms bearish momentum"
+      ]
+    },
+    "thesis": {
+      "symbol": "AMD",
+      "direction": "BEARISH",
+      "confidence": "MEDIUM",
+      "supporting_evidence": [
+        "Price of 456.51 is trading below both the 20 EMA and 50 EMA on the 1-hour (460.31, 466.23) and 15-minute (457.00, 458.69) charts, confirming aligned bearish trend structure.",
+        "RSI is in bearish territory below 50 on both timeframes (41.99 on 1H, 44.61 on 15M).",
+        "Volume ratio at entry is exceptionally high at 5.34, showing strong interest and participation in the current price zone."
+      ],
+      "contradictions": [
+        "The exceptionally high volume ratio (5.34) on the 15-minute chart can sometimes signal a capitulation or selling exhaustion point rather than a sustainable continuation.",
+        "15-minute RSI (44.61) is higher than the 1-hour RSI (41.99), indicating a slight deceleration in downward momentum as price approaches the entry point."
+      ],
+      "neutral_scenario": "The price consolidates sideways between 456.00 and 458.00 on diminishing volume, with the RSI flattening out near 45, making a directional option strategy unprofitable due to theta decay.",
+      "failure_scenario": "A strong upward reversal where price breaks and closes above the 15-minute EMA_50 of 458.69 and the 1-hour EMA_20 of 460.31, invalidating the bearish trend structure.",
+      "reasoning_summary": "Trend alignment across both timeframes supports a bearish outlook, but the extreme volume spike at the current low raises the risk of selling exhaustion and near-term mean reversion. A cautious bearish stance is warranted."
+    },
+    "fragility_score": 25,
+    "fragility_classification": "LOW",
+    "fragility_decision": "TRADE",
+    "fragility": {
+      "score": 25,
+      "classification": "LOW",
+      "decision": "TRADE",
+      "override": null,
+      "components": {
+        "trend": 0,
+        "momentum": 0,
+        "volume": 0,
+        "neutral_pressure": 10,
+        "failure_pressure": 10,
+        "volatility": 5
+      }
+    },
+    "contracts": {
+      "strategy": "BEAR_PUT_SPREAD",
+      "symbol": "AMD",
+      "expiration_date": "2026-09-04",
+      "long_leg": {
+        "symbol": "AMD260904P00457500",
+        "strike": 457.5,
+        "side": "BUY",
+        "type": "PUT"
+      },
+      "short_leg": {
+        "symbol": "AMD260904P00452500",
+        "strike": 452.5,
+        "side": "SELL",
+        "type": "PUT"
+      }
+    },
+    "pricing": {
+      "long_leg": {
+        "symbol": "AMD260904P00457500",
+        "bid": 7.39,
+        "ask": 7.58,
+        "mid": 7.48
+      },
+      "short_leg": {
+        "symbol": "AMD260904P00452500",
+        "bid": 5.1,
+        "ask": 5.45,
+        "mid": 5.28
+      },
+      "estimated_debit": 2.48,
+      "estimated_mid_debit": 2.2,
+      "estimated_exit_credit": 1.94
+    },
+    "risk": {
+      "status": "REJECTED",
+      "reason_codes": [
+        "MAX_OPEN_POSITIONS_REACHED"
+      ],
+      "approved_contracts": 0
+    },
+    "approved_contracts": 0,
+    "execution": {},
+    "execution_status": "REJECTED",
+    "position_status": "NO_POSITION",
+    "position_decision": "NOT_APPLICABLE",
+    "position_history": [],
+    "autonomous": {
+      "selected_symbol": "AMD",
+      "scan_summary": {
+        "scanned_count": 8,
+        "candidate_count": 1
+      },
+      "scanned_count": 8,
+      "candidate_count": 1
+    }
+  },
+  {
+    "id": "63fa0940-2cb9-4df5-9e24-2e9ff5ab7127",
+    "created_at": "2026-09-03T09:29:04.435214+00:00",
+    "updated_at": "2026-09-03T09:29:04.435214+00:00",
+    "mode": "MANUAL",
+    "symbol": "QQQ",
+    "status": "WAIT",
+    "stage": "OPPORTUNITY_ENGINE",
+    "message": "No sufficiently aligned trading opportunity detected.",
+    "direction": "NEUTRAL",
+    "strategy": null,
+    "opportunity": {
+      "symbol": "QQQ",
+      "direction": "NEUTRAL",
+      "action": "WAIT",
+      "strategy": null,
+      "reasons": [
+        "1H trend: BEARISH",
+        "15M trend: NEUTRAL",
+        "15M momentum: OVEREXTENDED_BULLISH",
+        "Conditions are not sufficiently aligned for a trade candidate"
+      ]
+    },
+    "thesis": {},
+    "fragility_score": null,
+    "fragility_classification": null,
+    "fragility_decision": null,
+    "fragility": {},
+    "contracts": {},
+    "pricing": {},
+    "risk": {},
+    "approved_contracts": null,
+    "execution": {},
+    "execution_status": "WAIT",
+    "position_status": "NO_POSITION",
+    "position_decision": "NOT_APPLICABLE",
+    "position_history": [],
+    "autonomous": {}
+  },
+  {
+    "id": "cbe91b5a-7aa5-4887-8e0d-c8d439871be5",
+    "created_at": "2026-09-03T09:32:13.698603+00:00",
+    "updated_at": "2026-09-03T09:32:13.698603+00:00",
+    "mode": "AUTONOMOUS",
+    "symbol": "AMD",
+    "status": "REJECTED",
+    "stage": "RISK_GOVERNOR",
+    "message": "Trade was not approved by the Risk Governor.",
+    "direction": "BEARISH",
+    "strategy": "BEAR_PUT_SPREAD",
+    "opportunity": {
+      "symbol": "AMD",
+      "direction": "BEARISH",
+      "action": "CANDIDATE",
+      "strategy": "BEAR_PUT_SPREAD",
+      "reasons": [
+        "1H trend is bearish",
+        "15M trend confirms bearish direction",
+        "15M RSI confirms bearish momentum"
+      ]
+    },
+    "thesis": {
+      "symbol": "AMD",
+      "direction": "BEARISH",
+      "confidence": "MEDIUM",
+      "supporting_evidence": [
+        "Price of 456.51 is below both the 1H EMA 20 (460.31) and 1H EMA 50 (466.23), indicating a clear hourly downtrend.",
+        "Price is also below the entry EMA 20 (457.0) and EMA 50 (458.69), confirming short-term bearish alignment.",
+        "Both hourly RSI (41.99) and entry RSI (44.61) are under 50, reflecting bearish momentum.",
+        "A highly elevated entry volume ratio of 5.34 indicates strong selling interest or high participation at the current level."
+      ],
+      "contradictions": [
+        "While the price remained identical at 456.51, the RSI increased from 41.99 on the hourly to 44.61 at entry, representing a minor bullish momentum divergence.",
+        "The entry close (456.51) is extremely close to the short-term EMA 20 (457.0), suggesting the short-term bearish trend is vulnerable to immediate invalidation on any minor upward fluctuation."
+      ],
+      "neutral_scenario": "AMD consolidates in a tight range between 456.50 and 458.00, causing the short-term EMAs to flatten out, RSI to drift to 50, and the volume ratio to fall back below 1.0.",
+      "failure_scenario": "AMD price breaks above the short-term resistance of 458.69 (entry EMA 50) and continues to breach the hourly EMA 20 (460.31) on rising volume, invalidating the bearish structure on both timeframes.",
+      "reasoning_summary": "The trade is structurally supported by aligned bearish trends on both the hourly and entry timeframes, bolstered by a massive spike in entry volume. However, confidence is capped at medium due to a minor positive drift in RSI despite flat pricing, and the very narrow distance to the entry EMA 20 overhead."
+    },
+    "fragility_score": 25,
+    "fragility_classification": "LOW",
+    "fragility_decision": "TRADE",
+    "fragility": {
+      "score": 25,
+      "classification": "LOW",
+      "decision": "TRADE",
+      "override": null,
+      "components": {
+        "trend": 0,
+        "momentum": 0,
+        "volume": 0,
+        "neutral_pressure": 10,
+        "failure_pressure": 10,
+        "volatility": 5
+      }
+    },
+    "contracts": {
+      "strategy": "BEAR_PUT_SPREAD",
+      "symbol": "AMD",
+      "expiration_date": "2026-09-04",
+      "long_leg": {
+        "symbol": "AMD260904P00457500",
+        "strike": 457.5,
+        "side": "BUY",
+        "type": "PUT"
+      },
+      "short_leg": {
+        "symbol": "AMD260904P00452500",
+        "strike": 452.5,
+        "side": "SELL",
+        "type": "PUT"
+      }
+    },
+    "pricing": {
+      "long_leg": {
+        "symbol": "AMD260904P00457500",
+        "bid": 7.39,
+        "ask": 7.58,
+        "mid": 7.48
+      },
+      "short_leg": {
+        "symbol": "AMD260904P00452500",
+        "bid": 5.1,
+        "ask": 5.45,
+        "mid": 5.28
+      },
+      "estimated_debit": 2.48,
+      "estimated_mid_debit": 2.2,
+      "estimated_exit_credit": 1.94
+    },
+    "risk": {
+      "status": "REJECTED",
+      "reason_codes": [
+        "MAX_OPEN_POSITIONS_REACHED"
+      ],
+      "approved_contracts": 0
+    },
+    "approved_contracts": 0,
+    "execution": {},
+    "execution_status": "REJECTED",
+    "position_status": "NO_POSITION",
+    "position_decision": "NOT_APPLICABLE",
+    "position_history": [],
+    "autonomous": {
+      "selected_symbol": "AMD",
+      "scan_summary": {
+        "scanned_count": 8,
+        "candidate_count": 1
+      },
+      "scanned_count": 8,
+      "candidate_count": 1
+    }
+  },
+  {
+    "id": "aa4e61b1-96f3-4ee8-9dae-984e230e428f",
+    "created_at": "2026-09-03T09:34:10.759468+00:00",
+    "updated_at": "2026-09-03T09:34:10.759468+00:00",
+    "mode": "AUTONOMOUS",
+    "symbol": "AMD",
+    "status": "REJECTED",
+    "stage": "RISK_GOVERNOR",
+    "message": "Trade was not approved by the Risk Governor.",
+    "direction": "BEARISH",
+    "strategy": "BEAR_PUT_SPREAD",
+    "opportunity": {
+      "symbol": "AMD",
+      "direction": "BEARISH",
+      "action": "CANDIDATE",
+      "strategy": "BEAR_PUT_SPREAD",
+      "reasons": [
+        "1H trend is bearish",
+        "15M trend confirms bearish direction",
+        "15M RSI confirms bearish momentum"
+      ]
+    },
+    "thesis": {
+      "symbol": "AMD",
+      "direction": "BEARISH",
+      "confidence": "MEDIUM",
+      "supporting_evidence": [
+        "Hourly close of 456.51 is below both EMA_20 (460.31) and EMA_50 (466.23), confirming a bearish trend.",
+        "Entry close of 456.51 is below the entry EMA_20 (457.0) and EMA_50 (458.69), indicating continuation of the bearish structure.",
+        "Both hourly RSI (41.99) and entry RSI (44.61) remain below the 50 neutral level, pointing to bearish momentum.",
+        "A highly elevated entry volume ratio of 5.34 indicates strong market interest and participation at this level."
+      ],
+      "contradictions": [
+        "The close price remained completely flat at 456.51 between 19:00 and 19:45 despite an entry volume ratio of 5.34, pointing to potential support or absorption at this level.",
+        "RSI ticked up slightly from 41.99 (hourly) to 44.61 (entry), indicating a minor loss of downward momentum."
+      ],
+      "neutral_scenario": "The price continues to consolidate flatly around 456.51 with declining volume, and RSI consolidates near 50, neutralizing any clear directional bias.",
+      "failure_scenario": "The price rises and breaks above the entry EMA_50 of 458.69 on high volume, with the RSI crossing above 50, invalidating the bearish thesis.",
+      "reasoning_summary": "The trend aligns as bearish across multiple timeframes with a notable volume surge on the entry trigger. However, the lack of actual price progress (remaining flat at 456.51) and a slight tick up in RSI warrant a Medium confidence rating, as it suggests the potential presence of a firm support level."
+    },
+    "fragility_score": 25,
+    "fragility_classification": "LOW",
+    "fragility_decision": "TRADE",
+    "fragility": {
+      "score": 25,
+      "classification": "LOW",
+      "decision": "TRADE",
+      "override": null,
+      "components": {
+        "trend": 0,
+        "momentum": 0,
+        "volume": 0,
+        "neutral_pressure": 10,
+        "failure_pressure": 10,
+        "volatility": 5
+      }
+    },
+    "contracts": {
+      "strategy": "BEAR_PUT_SPREAD",
+      "symbol": "AMD",
+      "expiration_date": "2026-09-04",
+      "long_leg": {
+        "symbol": "AMD260904P00457500",
+        "strike": 457.5,
+        "side": "BUY",
+        "type": "PUT"
+      },
+      "short_leg": {
+        "symbol": "AMD260904P00452500",
+        "strike": 452.5,
+        "side": "SELL",
+        "type": "PUT"
+      }
+    },
+    "pricing": {
+      "long_leg": {
+        "symbol": "AMD260904P00457500",
+        "bid": 7.39,
+        "ask": 7.58,
+        "mid": 7.48
+      },
+      "short_leg": {
+        "symbol": "AMD260904P00452500",
+        "bid": 5.1,
+        "ask": 5.45,
+        "mid": 5.28
+      },
+      "estimated_debit": 2.48,
+      "estimated_mid_debit": 2.2,
+      "estimated_exit_credit": 1.94
+    },
+    "risk": {
+      "status": "REJECTED",
+      "reason_codes": [
+        "MAX_OPEN_POSITIONS_REACHED"
+      ],
+      "approved_contracts": 0
+    },
+    "approved_contracts": 0,
+    "execution": {},
+    "execution_status": "REJECTED",
+    "position_status": "NO_POSITION",
+    "position_decision": "NOT_APPLICABLE",
+    "position_history": [],
+    "autonomous": {
+      "selected_symbol": "AMD",
+      "scan_summary": {
+        "scanned_count": 8,
+        "candidate_count": 1
+      },
+      "scanned_count": 8,
+      "candidate_count": 1
+    }
+  },
+  {
+    "id": "6b77cb75-4303-470c-aa1c-ac04f75da72d",
+    "created_at": "2026-09-03T09:39:28.660973+00:00",
+    "updated_at": "2026-09-03T09:39:28.660973+00:00",
+    "mode": "AUTONOMOUS",
+    "symbol": "AMD",
+    "status": "REJECTED",
+    "stage": "RISK_GOVERNOR",
+    "message": "Trade was not approved by the Risk Governor.",
+    "direction": "BEARISH",
+    "strategy": "BEAR_PUT_SPREAD",
+    "opportunity": {
+      "symbol": "AMD",
+      "direction": "BEARISH",
+      "action": "CANDIDATE",
+      "strategy": "BEAR_PUT_SPREAD",
+      "reasons": [
+        "1H trend is bearish",
+        "15M trend confirms bearish direction",
+        "15M RSI confirms bearish momentum"
+      ]
+    },
+    "thesis": {
+      "symbol": "AMD",
+      "direction": "BEARISH",
+      "confidence": "MEDIUM",
+      "supporting_evidence": [
+        "Hourly price of 456.51 is trading below the 1H EMA 20 (460.31) and 1H EMA 50 (466.23), establishing a clear bearish trend.",
+        "Entry price of 456.51 is below both the 15M EMA 20 (457.0) and 15M EMA 50 (458.69), showing aligned bearish structure on the execution timeframe.",
+        "A highly elevated entry volume ratio of 5.34 indicates strong participation and momentum confirming the move.",
+        "RSI remains below 50 on both timeframes (41.99 on the hourly and 44.61 on the entry timeframe), pointing to continued bearish control."
+      ],
+      "contradictions": [
+        "The RSI has ticked slightly upward from 41.99 on the hourly to 44.61 on the 15-minute chart, indicating a minor slowdown in downward momentum.",
+        "Price is trading very close to the 15-minute EMA 20 (457.0), suggesting that any immediate bounce could challenge the short-term bearish thesis."
+      ],
+      "neutral_scenario": "The price consolidates in a tight range between 456.00 and 458.00 on declining volume, flattening out the 15-minute EMAs and neutralizing short-term momentum.",
+      "failure_scenario": "Price breaks above the 15-minute EMA 50 of 458.69 and subsequently breaches the 1H EMA 20 of 460.31 on high volume, invalidating the bearish alignment.",
+      "reasoning_summary": "AMD exhibits a consistent bearish structure across multiple timeframes, reinforced by exceptionally high entry volume (5.34). A slight divergence in RSI and the proximity to the immediate EMA 20 resistance introduce minor consolidation risk, making a medium-confidence Bear Put Spread appropriate."
+    },
+    "fragility_score": 25,
+    "fragility_classification": "LOW",
+    "fragility_decision": "TRADE",
+    "fragility": {
+      "score": 25,
+      "classification": "LOW",
+      "decision": "TRADE",
+      "override": null,
+      "components": {
+        "trend": 0,
+        "momentum": 0,
+        "volume": 0,
+        "neutral_pressure": 10,
+        "failure_pressure": 10,
+        "volatility": 5
+      }
+    },
+    "contracts": {
+      "strategy": "BEAR_PUT_SPREAD",
+      "symbol": "AMD",
+      "expiration_date": "2026-09-04",
+      "long_leg": {
+        "symbol": "AMD260904P00457500",
+        "strike": 457.5,
+        "side": "BUY",
+        "type": "PUT"
+      },
+      "short_leg": {
+        "symbol": "AMD260904P00452500",
+        "strike": 452.5,
+        "side": "SELL",
+        "type": "PUT"
+      }
+    },
+    "pricing": {
+      "long_leg": {
+        "symbol": "AMD260904P00457500",
+        "bid": 7.39,
+        "ask": 7.58,
+        "mid": 7.48
+      },
+      "short_leg": {
+        "symbol": "AMD260904P00452500",
+        "bid": 5.1,
+        "ask": 5.45,
+        "mid": 5.28
+      },
+      "estimated_debit": 2.48,
+      "estimated_mid_debit": 2.2,
+      "estimated_exit_credit": 1.94
+    },
+    "risk": {
+      "status": "REJECTED",
+      "reason_codes": [
+        "MAX_OPEN_POSITIONS_REACHED"
+      ],
+      "approved_contracts": 0
+    },
+    "approved_contracts": 0,
+    "execution": {},
+    "execution_status": "REJECTED",
+    "position_status": "NO_POSITION",
+    "position_decision": "NOT_APPLICABLE",
+    "position_history": [],
+    "autonomous": {
+      "selected_symbol": "AMD",
+      "scan_summary": {
+        "scanned_count": 8,
+        "candidate_count": 1
+      },
+      "scanned_count": 8,
+      "candidate_count": 1
+    }
+  },
+  {
+    "id": "34541a0c-8d3b-49e0-a5a1-2cb482e74116",
+    "created_at": "2026-09-03T09:55:30.357154+00:00",
+    "updated_at": "2026-09-03T09:56:06.337684+00:00",
+    "mode": "AUTONOMOUS",
+    "symbol": "AMD",
+    "status": "DRY_RUN",
+    "stage": "EXECUTION_COMPLETE",
+    "message": "Multi-leg order built but NOT sent to Alpaca",
+    "direction": "BEARISH",
+    "strategy": "BEAR_PUT_SPREAD",
+    "opportunity": {
+      "symbol": "AMD",
+      "direction": "BEARISH",
+      "action": "CANDIDATE",
+      "strategy": "BEAR_PUT_SPREAD",
+      "reasons": [
+        "1H trend is bearish",
+        "15M trend confirms bearish direction",
+        "15M RSI confirms bearish momentum"
+      ]
+    },
+    "thesis": {
+      "symbol": "AMD",
+      "direction": "BEARISH",
+      "confidence": "MEDIUM",
+      "supporting_evidence": [
+        "Hourly price (456.51) is below both EMA 20 (460.31) and EMA 50 (466.23), confirming a bearish macro trend.",
+        "Entry price (456.51) is below its EMA 20 (457.0) and EMA 50 (458.69), showing aligned bearish micro-structure.",
+        "RSI is below 50 on both the hourly (41.99) and entry (44.61) timeframes, confirming downward momentum.",
+        "Significantly high volume ratio at entry (5.34) indicates strong active participation."
+      ],
+      "contradictions": [
+        "The entry RSI (44.61) is higher than the hourly RSI (41.99), indicating a slight loss in bearish momentum on the lower timeframe.",
+        "The current close (456.51) is extremely close to the short-term EMA 20 resistance (457.00), risking a potential break above it."
+      ],
+      "neutral_scenario": "The price consolidates between 456.50 and 458.00, causing the entry RSI to drift toward 50 and volume to dry up, rendering the momentum indicators inconclusive.",
+      "failure_scenario": "AMD price breaks above the entry EMA 50 (458.69) and the hourly EMA 20 (460.31) on sustained high volume, invalidating the bearish structure and initiating a short-term trend reversal.",
+      "reasoning_summary": "The bearish thesis is supported by aligned multi-timeframe EMA structures and RSI momentum under 50. However, the high volume ratio could indicate a selling climax or near-term support test, and the price is hovering very close to short-term EMA resistance, warranting a medium-confidence rating."
+    },
+    "fragility_score": 25,
+    "fragility_classification": "LOW",
+    "fragility_decision": "TRADE",
+    "fragility": {
+      "score": 25,
+      "classification": "LOW",
+      "decision": "TRADE",
+      "override": null,
+      "components": {
+        "trend": 0,
+        "momentum": 0,
+        "volume": 0,
+        "neutral_pressure": 10,
+        "failure_pressure": 10,
+        "volatility": 5
+      }
+    },
+    "contracts": {
+      "strategy": "BEAR_PUT_SPREAD",
+      "symbol": "AMD",
+      "expiration_date": "2026-09-04",
+      "long_leg": {
+        "symbol": "AMD260904P00457500",
+        "strike": 457.5,
+        "side": "BUY",
+        "type": "PUT"
+      },
+      "short_leg": {
+        "symbol": "AMD260904P00452500",
+        "strike": 452.5,
+        "side": "SELL",
+        "type": "PUT"
+      }
+    },
+    "pricing": {
+      "long_leg": {
+        "symbol": "AMD260904P00457500",
+        "bid": 7.39,
+        "ask": 7.58,
+        "mid": 7.48
+      },
+      "short_leg": {
+        "symbol": "AMD260904P00452500",
+        "bid": 5.1,
+        "ask": 5.45,
+        "mid": 5.28
+      },
+      "estimated_debit": 2.48,
+      "estimated_mid_debit": 2.2,
+      "estimated_exit_credit": 1.94
+    },
+    "risk": {
+      "status": "APPROVED",
+      "reason_codes": [],
+      "symbol": "AMD",
+      "strategy": "BEAR_PUT_SPREAD",
+      "decision": "TRADE",
+      "account_equity": 100000.0,
+      "start_of_day_equity": 100000.0,
+      "max_trade_risk": 1000.0,
+      "risk_per_spread": 248.0,
+      "requested_contracts": 5,
+      "maximum_contracts": 4,
+      "approved_contracts": 4,
+      "proposed_max_loss": 992.0,
+      "current_portfolio_risk": 0.0,
+      "proposed_portfolio_risk": 992.0,
+      "max_portfolio_risk": 2000.0,
+      "daily_realized_pnl": 0.0,
+      "daily_loss_limit": 2000.0,
+      "buying_power": 400000.0
+    },
+    "approved_contracts": 4,
+    "execution": {
+      "status": "DRY_RUN",
+      "message": "Multi-leg order built but NOT sent to Alpaca",
+      "order": {
+        "strategy": "BEAR_PUT_SPREAD",
+        "symbol": "AMD",
+        "contracts": 4,
+        "limit_price": 2.48,
+        "expiration_date": "2026-09-04",
+        "legs": [
+          {
+            "symbol": "AMD260904P00457500",
+            "side": "BUY",
+            "ratio_qty": 1
+          },
+          {
+            "symbol": "AMD260904P00452500",
+            "side": "SELL",
+            "ratio_qty": 1
+          }
+        ]
+      }
+    },
+    "execution_status": "DRY_RUN",
+    "position_status": "CLOSED",
+    "position_decision": "EXIT",
+    "position_history": [
+      {
+        "timestamp": "2026-09-03T09:56:06.272259+00:00",
+        "decision": "EXIT",
+        "reason": "Structural fragility reached the critical exit threshold.",
+        "details": {
+          "opportunity": {
+            "symbol": "AMD",
+            "direction": "BEARISH",
+            "action": "CANDIDATE",
+            "strategy": "BEAR_PUT_SPREAD",
+            "reasons": [
+              "1H trend is bearish",
+              "15M trend confirms bearish direction",
+              "15M RSI confirms bearish momentum"
+            ]
+          },
+          "fragility": {
+            "score": 25,
+            "classification": "LOW",
+            "decision": "TRADE",
+            "override": null,
+            "components": {
+              "trend": 0,
+              "momentum": 0,
+              "volume": 0,
+              "neutral_pressure": 10,
+              "failure_pressure": 10,
+              "volatility": 5
+            }
+          },
+          "pricing": {
+            "long_leg": {
+              "symbol": "AMD260904P00457500",
+              "bid": 7.39,
+              "ask": 7.58,
+              "mid": 7.48
+            },
+            "short_leg": {
+              "symbol": "AMD260904P00452500",
+              "bid": 5.1,
+              "ask": 5.45,
+              "mid": 5.28
+            },
+            "estimated_debit": 2.48,
+            "estimated_mid_debit": 2.2,
+            "estimated_exit_credit": 1.94
+          },
+          "pnl": {
+            "available": true,
+            "entry_price": 2.48,
+            "current_mark": 2.2,
+            "contracts": 4,
+            "unrealized_pnl": -112.0,
+            "unrealized_pnl_percent": -11.29
+          },
+          "realized_pnl": {
+            "available": true,
+            "entry_price": 2.48,
+            "exit_price": 1.94,
+            "contracts": 4,
+            "realized_pnl": -216.0,
+            "realized_pnl_percent": -21.77
+          },
+          "thesis_valid": true,
+          "exit_execution": {
+            "status": "DRY_RUN",
+            "message": "Closing multi-leg order built but NOT sent to Alpaca",
+            "order": {
+              "action": "CLOSE_POSITION",
+              "strategy": "BEAR_PUT_SPREAD",
+              "symbol": "AMD",
+              "contracts": 4,
+              "limit_price": 1.94,
+              "legs": [
+                {
+                  "symbol": "AMD260904P00457500",
+                  "side": "SELL",
+                  "ratio_qty": 1
+                },
+                {
+                  "symbol": "AMD260904P00452500",
+                  "side": "BUY",
+                  "ratio_qty": 1
+                }
+              ]
+            }
+          }
+        }
+      }
+    ],
+    "autonomous": {
+      "selected_symbol": "AMD",
+      "scan_summary": {
+        "scanned_count": 8,
+        "candidate_count": 1
+      },
+      "scanned_count": 8,
+      "candidate_count": 1
+    },
+    "exit_execution": {
+      "status": "DRY_RUN",
+      "message": "Closing multi-leg order built but NOT sent to Alpaca",
+      "order": {
+        "action": "CLOSE_POSITION",
+        "strategy": "BEAR_PUT_SPREAD",
+        "symbol": "AMD",
+        "contracts": 4,
+        "limit_price": 1.94,
+        "legs": [
+          {
+            "symbol": "AMD260904P00457500",
+            "side": "SELL",
+            "ratio_qty": 1
+          },
+          {
+            "symbol": "AMD260904P00452500",
+            "side": "BUY",
+            "ratio_qty": 1
+          }
+        ]
+      }
+    },
+    "realized_pnl": {
+      "available": true,
+      "entry_price": 2.48,
+      "exit_price": 1.94,
+      "contracts": 4,
+      "realized_pnl": -216.0,
+      "realized_pnl_percent": -21.77
+    },
+    "closed_at": "2026-09-03T09:56:06.330195+00:00"
+  },
+  {
+    "id": "db867032-ec97-4833-9f12-e5f9b48b8d97",
+    "created_at": "2026-09-03T10:04:20.229629+00:00",
+    "updated_at": "2026-09-03T10:04:39.289343+00:00",
+    "mode": "AUTONOMOUS",
+    "symbol": "AMD",
+    "status": "DRY_RUN",
+    "stage": "EXECUTION_COMPLETE",
+    "message": "Multi-leg order built but NOT sent to Alpaca",
+    "direction": "BEARISH",
+    "strategy": "BEAR_PUT_SPREAD",
+    "opportunity": {
+      "symbol": "AMD",
+      "direction": "BEARISH",
+      "action": "CANDIDATE",
+      "strategy": "BEAR_PUT_SPREAD",
+      "reasons": [
+        "1H trend is bearish",
+        "15M trend confirms bearish direction",
+        "15M RSI confirms bearish momentum"
+      ]
+    },
+    "thesis": {
+      "symbol": "AMD",
+      "direction": "BEARISH",
+      "confidence": "MEDIUM",
+      "supporting_evidence": [
+        "Hourly price remains below both the 20 EMA and 50 EMA, supporting a bearish market structure.",
+        "Entry timeframe structure confirms the bearish direction.",
+        "RSI remains below the neutral 50 level across both timeframes.",
+        "Entry timeframe volume is elevated, indicating increased market participation."
+      ],
+      "contradictions": [
+        "Extremely elevated volume may represent exhaustion or a potential reversal event.",
+        "Entry RSI is stronger than hourly RSI, indicating possible weakening bearish momentum."
+      ],
+      "neutral_scenario": "Price consolidates and directional momentum weakens, causing the market structure to become inconclusive.",
+      "failure_scenario": "Price recovers above the short-term moving average structure and invalidates the bearish directional thesis.",
+      "reasoning_summary": "This thesis was generated using TARK's deterministic fallback analysis because the external AI provider was unavailable.",
+      "source": "DETERMINISTIC_FALLBACK",
+      "ai_error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.5-flash\\nPlease retry in 42.780430941s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '42s'}]}}"
+    },
+    "fragility_score": 25,
+    "fragility_classification": "LOW",
+    "fragility_decision": "TRADE",
+    "fragility": {
+      "score": 25,
+      "classification": "LOW",
+      "decision": "TRADE",
+      "override": null,
+      "components": {
+        "trend": 0,
+        "momentum": 0,
+        "volume": 0,
+        "neutral_pressure": 10,
+        "failure_pressure": 10,
+        "volatility": 5
+      }
+    },
+    "contracts": {
+      "strategy": "BEAR_PUT_SPREAD",
+      "symbol": "AMD",
+      "expiration_date": "2026-09-04",
+      "long_leg": {
+        "symbol": "AMD260904P00457500",
+        "strike": 457.5,
+        "side": "BUY",
+        "type": "PUT"
+      },
+      "short_leg": {
+        "symbol": "AMD260904P00452500",
+        "strike": 452.5,
+        "side": "SELL",
+        "type": "PUT"
+      }
+    },
+    "pricing": {
+      "long_leg": {
+        "symbol": "AMD260904P00457500",
+        "bid": 7.39,
+        "ask": 7.58,
+        "mid": 7.48
+      },
+      "short_leg": {
+        "symbol": "AMD260904P00452500",
+        "bid": 5.1,
+        "ask": 5.45,
+        "mid": 5.28
+      },
+      "estimated_debit": 2.48,
+      "estimated_mid_debit": 2.2,
+      "estimated_exit_credit": 1.94
+    },
+    "risk": {
+      "status": "APPROVED",
+      "reason_codes": [],
+      "symbol": "AMD",
+      "strategy": "BEAR_PUT_SPREAD",
+      "decision": "TRADE",
+      "account_equity": 100000.0,
+      "start_of_day_equity": 100000.0,
+      "max_trade_risk": 1000.0,
+      "risk_per_spread": 248.0,
+      "requested_contracts": 5,
+      "maximum_contracts": 4,
+      "approved_contracts": 4,
+      "proposed_max_loss": 992.0,
+      "current_portfolio_risk": 0.0,
+      "proposed_portfolio_risk": 992.0,
+      "max_portfolio_risk": 2000.0,
+      "daily_realized_pnl": 0.0,
+      "daily_loss_limit": 2000.0,
+      "buying_power": 400000.0
+    },
+    "approved_contracts": 4,
+    "execution": {
+      "status": "DRY_RUN",
+      "message": "Multi-leg order built but NOT sent to Alpaca",
+      "order": {
+        "strategy": "BEAR_PUT_SPREAD",
+        "symbol": "AMD",
+        "contracts": 4,
+        "limit_price": 2.48,
+        "expiration_date": "2026-09-04",
+        "legs": [
+          {
+            "symbol": "AMD260904P00457500",
+            "side": "BUY",
+            "ratio_qty": 1
+          },
+          {
+            "symbol": "AMD260904P00452500",
+            "side": "SELL",
+            "ratio_qty": 1
+          }
+        ]
+      }
+    },
+    "execution_status": "DRY_RUN",
+    "position_status": "CLOSED",
+    "position_decision": "EXIT",
+    "position_history": [
+      {
+        "timestamp": "2026-09-03T10:04:39.249945+00:00",
+        "decision": "EXIT",
+        "reason": "Structural fragility reached the critical exit threshold.",
+        "details": {
+          "opportunity": {
+            "symbol": "AMD",
+            "direction": "BEARISH",
+            "action": "CANDIDATE",
+            "strategy": "BEAR_PUT_SPREAD",
+            "reasons": [
+              "1H trend is bearish",
+              "15M trend confirms bearish direction",
+              "15M RSI confirms bearish momentum"
+            ]
+          },
+          "fragility": {
+            "score": 25,
+            "classification": "LOW",
+            "decision": "TRADE",
+            "override": null,
+            "components": {
+              "trend": 0,
+              "momentum": 0,
+              "volume": 0,
+              "neutral_pressure": 10,
+              "failure_pressure": 10,
+              "volatility": 5
+            }
+          },
+          "pricing": {
+            "long_leg": {
+              "symbol": "AMD260904P00457500",
+              "bid": 7.39,
+              "ask": 7.58,
+              "mid": 7.48
+            },
+            "short_leg": {
+              "symbol": "AMD260904P00452500",
+              "bid": 5.1,
+              "ask": 5.45,
+              "mid": 5.28
+            },
+            "estimated_debit": 2.48,
+            "estimated_mid_debit": 2.2,
+            "estimated_exit_credit": 1.94
+          },
+          "pnl": {
+            "available": true,
+            "entry_price": 2.48,
+            "current_mark": 2.2,
+            "contracts": 4,
+            "unrealized_pnl": -112.0,
+            "unrealized_pnl_percent": -11.29
+          },
+          "realized_pnl": {
+            "available": true,
+            "entry_price": 2.48,
+            "exit_price": 1.94,
+            "contracts": 4,
+            "realized_pnl": -216.0,
+            "realized_pnl_percent": -21.77
+          },
+          "thesis_valid": true,
+          "exit_execution": {
+            "status": "DRY_RUN",
+            "message": "Closing multi-leg order built but NOT sent to Alpaca",
+            "order": {
+              "action": "CLOSE_POSITION",
+              "strategy": "BEAR_PUT_SPREAD",
+              "symbol": "AMD",
+              "contracts": 4,
+              "limit_price": 1.94,
+              "legs": [
+                {
+                  "symbol": "AMD260904P00457500",
+                  "side": "SELL",
+                  "ratio_qty": 1
+                },
+                {
+                  "symbol": "AMD260904P00452500",
+                  "side": "BUY",
+                  "ratio_qty": 1
+                }
+              ]
+            }
+          }
+        }
+      }
+    ],
+    "autonomous": {
+      "selected_symbol": "AMD",
+      "scan_summary": {
+        "scanned_count": 8,
+        "candidate_count": 1
+      },
+      "scanned_count": 8,
+      "candidate_count": 1
+    },
+    "exit_execution": {
+      "status": "DRY_RUN",
+      "message": "Closing multi-leg order built but NOT sent to Alpaca",
+      "order": {
+        "action": "CLOSE_POSITION",
+        "strategy": "BEAR_PUT_SPREAD",
+        "symbol": "AMD",
+        "contracts": 4,
+        "limit_price": 1.94,
+        "legs": [
+          {
+            "symbol": "AMD260904P00457500",
+            "side": "SELL",
+            "ratio_qty": 1
+          },
+          {
+            "symbol": "AMD260904P00452500",
+            "side": "BUY",
+            "ratio_qty": 1
+          }
+        ]
+      }
+    },
+    "realized_pnl": {
+      "available": true,
+      "entry_price": 2.48,
+      "exit_price": 1.94,
+      "contracts": 4,
+      "realized_pnl": -216.0,
+      "realized_pnl_percent": -21.77
+    },
+    "closed_at": "2026-09-03T10:04:39.282056+00:00"
+  },
+  {
+    "id": "43105920-279b-4ef3-a57c-6e49215980ea",
+    "created_at": "2026-09-03T10:04:55.703992+00:00",
+    "updated_at": "2026-09-03T10:13:25.300158+00:00",
+    "mode": "AUTONOMOUS",
+    "symbol": "AMD",
+    "status": "DRY_RUN",
+    "stage": "EXECUTION_COMPLETE",
+    "message": "Multi-leg order built but NOT sent to Alpaca",
+    "direction": "BEARISH",
+    "strategy": "BEAR_PUT_SPREAD",
+    "opportunity": {
+      "symbol": "AMD",
+      "direction": "BEARISH",
+      "action": "CANDIDATE",
+      "strategy": "BEAR_PUT_SPREAD",
+      "reasons": [
+        "1H trend is bearish",
+        "15M trend confirms bearish direction",
+        "15M RSI confirms bearish momentum"
+      ]
+    },
+    "thesis": {
+      "symbol": "AMD",
+      "direction": "BEARISH",
+      "confidence": "MEDIUM",
+      "supporting_evidence": [
+        "Hourly price remains below both the 20 EMA and 50 EMA, supporting a bearish market structure.",
+        "Entry timeframe structure confirms the bearish direction.",
+        "RSI remains below the neutral 50 level across both timeframes.",
+        "Entry timeframe volume is elevated, indicating increased market participation."
+      ],
+      "contradictions": [
+        "Extremely elevated volume may represent exhaustion or a potential reversal event.",
+        "Entry RSI is stronger than hourly RSI, indicating possible weakening bearish momentum."
+      ],
+      "neutral_scenario": "Price consolidates and directional momentum weakens, causing the market structure to become inconclusive.",
+      "failure_scenario": "Price recovers above the short-term moving average structure and invalidates the bearish directional thesis.",
+      "reasoning_summary": "This thesis was generated using TARK's deterministic fallback analysis because the external AI provider was unavailable.",
+      "source": "DETERMINISTIC_FALLBACK",
+      "ai_error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.5-flash\\nPlease retry in 7.346333916s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '7s'}]}}"
+    },
+    "fragility_score": 25,
+    "fragility_classification": "LOW",
+    "fragility_decision": "TRADE",
+    "fragility": {
+      "score": 25,
+      "classification": "LOW",
+      "decision": "TRADE",
+      "override": null,
+      "components": {
+        "trend": 0,
+        "momentum": 0,
+        "volume": 0,
+        "neutral_pressure": 10,
+        "failure_pressure": 10,
+        "volatility": 5
+      }
+    },
+    "contracts": {
+      "strategy": "BEAR_PUT_SPREAD",
+      "symbol": "AMD",
+      "expiration_date": "2026-09-04",
+      "long_leg": {
+        "symbol": "AMD260904P00457500",
+        "strike": 457.5,
+        "side": "BUY",
+        "type": "PUT"
+      },
+      "short_leg": {
+        "symbol": "AMD260904P00452500",
+        "strike": 452.5,
+        "side": "SELL",
+        "type": "PUT"
+      }
+    },
+    "pricing": {
+      "long_leg": {
+        "symbol": "AMD260904P00457500",
+        "bid": 7.39,
+        "ask": 7.58,
+        "mid": 7.48
+      },
+      "short_leg": {
+        "symbol": "AMD260904P00452500",
+        "bid": 5.1,
+        "ask": 5.45,
+        "mid": 5.28
+      },
+      "estimated_debit": 2.48,
+      "estimated_mid_debit": 2.2,
+      "estimated_exit_credit": 1.94
+    },
+    "risk": {
+      "status": "APPROVED",
+      "reason_codes": [],
+      "symbol": "AMD",
+      "strategy": "BEAR_PUT_SPREAD",
+      "decision": "TRADE",
+      "account_equity": 100000.0,
+      "start_of_day_equity": 100000.0,
+      "max_trade_risk": 1000.0,
+      "risk_per_spread": 248.0,
+      "requested_contracts": 5,
+      "maximum_contracts": 4,
+      "approved_contracts": 4,
+      "proposed_max_loss": 992.0,
+      "current_portfolio_risk": 0.0,
+      "proposed_portfolio_risk": 992.0,
+      "max_portfolio_risk": 2000.0,
+      "daily_realized_pnl": 0.0,
+      "daily_loss_limit": 2000.0,
+      "buying_power": 400000.0
+    },
+    "approved_contracts": 4,
+    "execution": {
+      "status": "DRY_RUN",
+      "message": "Multi-leg order built but NOT sent to Alpaca",
+      "order": {
+        "strategy": "BEAR_PUT_SPREAD",
+        "symbol": "AMD",
+        "contracts": 4,
+        "limit_price": 2.48,
+        "expiration_date": "2026-09-04",
+        "legs": [
+          {
+            "symbol": "AMD260904P00457500",
+            "side": "BUY",
+            "ratio_qty": 1
+          },
+          {
+            "symbol": "AMD260904P00452500",
+            "side": "SELL",
+            "ratio_qty": 1
+          }
+        ]
+      }
+    },
+    "execution_status": "DRY_RUN",
+    "position_status": "CLOSED",
+    "position_decision": "EXIT",
+    "position_history": [
+      {
+        "timestamp": "2026-09-03T10:13:25.209035+00:00",
+        "decision": "EXIT",
+        "reason": "Structural fragility reached the critical exit threshold.",
+        "details": {
+          "opportunity": {
+            "symbol": "AMD",
+            "direction": "BEARISH",
+            "action": "CANDIDATE",
+            "strategy": "BEAR_PUT_SPREAD",
+            "reasons": [
+              "1H trend is bearish",
+              "15M trend confirms bearish direction",
+              "15M RSI confirms bearish momentum"
+            ]
+          },
+          "fragility": {
+            "score": 25,
+            "classification": "LOW",
+            "decision": "TRADE",
+            "override": null,
+            "components": {
+              "trend": 0,
+              "momentum": 0,
+              "volume": 0,
+              "neutral_pressure": 10,
+              "failure_pressure": 10,
+              "volatility": 5
+            }
+          },
+          "pricing": {
+            "long_leg": {
+              "symbol": "AMD260904P00457500",
+              "bid": 7.39,
+              "ask": 7.58,
+              "mid": 7.48
+            },
+            "short_leg": {
+              "symbol": "AMD260904P00452500",
+              "bid": 5.1,
+              "ask": 5.45,
+              "mid": 5.28
+            },
+            "estimated_debit": 2.48,
+            "estimated_mid_debit": 2.2,
+            "estimated_exit_credit": 1.94
+          },
+          "pnl": {
+            "available": true,
+            "entry_price": 2.48,
+            "current_mark": 2.2,
+            "contracts": 4,
+            "unrealized_pnl": -112.0,
+            "unrealized_pnl_percent": -11.29
+          },
+          "realized_pnl": {
+            "available": true,
+            "entry_price": 2.48,
+            "exit_price": 1.94,
+            "contracts": 4,
+            "realized_pnl": -216.0,
+            "realized_pnl_percent": -21.77
+          },
+          "thesis_valid": true,
+          "exit_execution": {
+            "status": "DRY_RUN",
+            "message": "Closing multi-leg order built but NOT sent to Alpaca",
+            "order": {
+              "action": "CLOSE_POSITION",
+              "strategy": "BEAR_PUT_SPREAD",
+              "symbol": "AMD",
+              "contracts": 4,
+              "limit_price": 1.94,
+              "legs": [
+                {
+                  "symbol": "AMD260904P00457500",
+                  "side": "SELL",
+                  "ratio_qty": 1
+                },
+                {
+                  "symbol": "AMD260904P00452500",
+                  "side": "BUY",
+                  "ratio_qty": 1
+                }
+              ]
+            }
+          }
+        }
+      }
+    ],
+    "autonomous": {
+      "selected_symbol": "AMD",
+      "scan_summary": {
+        "scanned_count": 8,
+        "candidate_count": 1
+      },
+      "scanned_count": 8,
+      "candidate_count": 1
+    },
+    "exit_execution": {
+      "status": "DRY_RUN",
+      "message": "Closing multi-leg order built but NOT sent to Alpaca",
+      "order": {
+        "action": "CLOSE_POSITION",
+        "strategy": "BEAR_PUT_SPREAD",
+        "symbol": "AMD",
+        "contracts": 4,
+        "limit_price": 1.94,
+        "legs": [
+          {
+            "symbol": "AMD260904P00457500",
+            "side": "SELL",
+            "ratio_qty": 1
+          },
+          {
+            "symbol": "AMD260904P00452500",
+            "side": "BUY",
+            "ratio_qty": 1
+          }
+        ]
+      }
+    },
+    "realized_pnl": {
+      "available": true,
+      "entry_price": 2.48,
+      "exit_price": 1.94,
+      "contracts": 4,
+      "realized_pnl": -216.0,
+      "realized_pnl_percent": -21.77
+    },
+    "closed_at": "2026-09-03T10:13:25.289858+00:00"
+  },
+  {
+    "id": "92e1c278-f1c0-44c6-9623-fcc1e1adb016",
+    "created_at": "2026-09-03T10:15:55.949457+00:00",
+    "updated_at": "2026-09-03T10:31:00.687927+00:00",
+    "mode": "AUTONOMOUS",
+    "symbol": "AMD",
+    "status": "DRY_RUN",
+    "stage": "EXECUTION_COMPLETE",
+    "message": "Multi-leg order built but NOT sent to Alpaca",
+    "direction": "BEARISH",
+    "strategy": "BEAR_PUT_SPREAD",
+    "opportunity": {
+      "symbol": "AMD",
+      "direction": "BEARISH",
+      "action": "CANDIDATE",
+      "strategy": "BEAR_PUT_SPREAD",
+      "reasons": [
+        "1H trend is bearish",
+        "15M trend confirms bearish direction",
+        "15M RSI confirms bearish momentum"
+      ]
+    },
+    "thesis": {
+      "symbol": "AMD",
+      "direction": "BEARISH",
+      "confidence": "MEDIUM",
+      "supporting_evidence": [
+        "Hourly price remains below both the 20 EMA and 50 EMA, supporting a bearish market structure.",
+        "Entry timeframe structure confirms the bearish direction.",
+        "RSI remains below the neutral 50 level across both timeframes.",
+        "Entry timeframe volume is elevated, indicating increased market participation."
+      ],
+      "contradictions": [
+        "Extremely elevated volume may represent exhaustion or a potential reversal event.",
+        "Entry RSI is stronger than hourly RSI, indicating possible weakening bearish momentum."
+      ],
+      "neutral_scenario": "Price consolidates and directional momentum weakens, causing the market structure to become inconclusive.",
+      "failure_scenario": "Price recovers above the short-term moving average structure and invalidates the bearish directional thesis.",
+      "reasoning_summary": "This thesis was generated using TARK's deterministic fallback analysis because the external AI provider was unavailable.",
+      "source": "DETERMINISTIC_FALLBACK",
+      "ai_error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.5-flash\\nPlease retry in 7.081089696s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-3.5-flash', 'location': 'global'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '7s'}]}}"
+    },
+    "fragility_score": 25,
+    "fragility_classification": "LOW",
+    "fragility_decision": "TRADE",
+    "fragility": {
+      "score": 25,
+      "classification": "LOW",
+      "decision": "TRADE",
+      "override": null,
+      "components": {
+        "trend": 0,
+        "momentum": 0,
+        "volume": 0,
+        "neutral_pressure": 10,
+        "failure_pressure": 10,
+        "volatility": 5
+      }
+    },
+    "contracts": {
+      "strategy": "BEAR_PUT_SPREAD",
+      "symbol": "AMD",
+      "expiration_date": "2026-09-04",
+      "long_leg": {
+        "symbol": "AMD260904P00457500",
+        "strike": 457.5,
+        "side": "BUY",
+        "type": "PUT"
+      },
+      "short_leg": {
+        "symbol": "AMD260904P00452500",
+        "strike": 452.5,
+        "side": "SELL",
+        "type": "PUT"
+      }
+    },
+    "pricing": {
+      "long_leg": {
+        "symbol": "AMD260904P00457500",
+        "bid": 7.39,
+        "ask": 7.58,
+        "mid": 7.48
+      },
+      "short_leg": {
+        "symbol": "AMD260904P00452500",
+        "bid": 5.1,
+        "ask": 5.45,
+        "mid": 5.28
+      },
+      "estimated_debit": 2.48,
+      "estimated_mid_debit": 2.2,
+      "estimated_exit_credit": 1.94
+    },
+    "risk": {
+      "status": "APPROVED",
+      "reason_codes": [],
+      "symbol": "AMD",
+      "strategy": "BEAR_PUT_SPREAD",
+      "decision": "TRADE",
+      "account_equity": 100000.0,
+      "start_of_day_equity": 100000.0,
+      "max_trade_risk": 1000.0,
+      "risk_per_spread": 248.0,
+      "requested_contracts": 5,
+      "maximum_contracts": 4,
+      "approved_contracts": 4,
+      "proposed_max_loss": 992.0,
+      "current_portfolio_risk": 0.0,
+      "proposed_portfolio_risk": 992.0,
+      "max_portfolio_risk": 2000.0,
+      "daily_realized_pnl": 0.0,
+      "daily_loss_limit": 2000.0,
+      "buying_power": 400000.0
+    },
+    "approved_contracts": 4,
+    "execution": {
+      "status": "DRY_RUN",
+      "message": "Multi-leg order built but NOT sent to Alpaca",
+      "order": {
+        "strategy": "BEAR_PUT_SPREAD",
+        "symbol": "AMD",
+        "contracts": 4,
+        "limit_price": 2.48,
+        "expiration_date": "2026-09-04",
+        "legs": [
+          {
+            "symbol": "AMD260904P00457500",
+            "side": "BUY",
+            "ratio_qty": 1
+          },
+          {
+            "symbol": "AMD260904P00452500",
+            "side": "SELL",
+            "ratio_qty": 1
+          }
+        ]
+      }
+    },
+    "execution_status": "DRY_RUN",
+    "position_status": "CLOSED",
+    "position_decision": "EXIT",
+    "position_history": [
+      {
+        "timestamp": "2026-09-03T10:31:00.639328+00:00",
+        "decision": "EXIT",
+        "reason": "Structural fragility reached the critical exit threshold.",
+        "details": {
+          "opportunity": {
+            "symbol": "AMD",
+            "direction": "BEARISH",
+            "action": "CANDIDATE",
+            "strategy": "BEAR_PUT_SPREAD",
+            "reasons": [
+              "1H trend is bearish",
+              "15M trend confirms bearish direction",
+              "15M RSI confirms bearish momentum"
+            ]
+          },
+          "fragility": {
+            "score": 25,
+            "classification": "LOW",
+            "decision": "TRADE",
+            "override": null,
+            "components": {
+              "trend": 0,
+              "momentum": 0,
+              "volume": 0,
+              "neutral_pressure": 10,
+              "failure_pressure": 10,
+              "volatility": 5
+            }
+          },
+          "pricing": {
+            "long_leg": {
+              "symbol": "AMD260904P00457500",
+              "bid": 7.39,
+              "ask": 7.58,
+              "mid": 7.48
+            },
+            "short_leg": {
+              "symbol": "AMD260904P00452500",
+              "bid": 5.1,
+              "ask": 5.45,
+              "mid": 5.28
+            },
+            "estimated_debit": 2.48,
+            "estimated_mid_debit": 2.2,
+            "estimated_exit_credit": 1.94
+          },
+          "pnl": {
+            "available": true,
+            "entry_price": 2.48,
+            "current_mark": 2.2,
+            "contracts": 4,
+            "unrealized_pnl": -112.0,
+            "unrealized_pnl_percent": -11.29
+          },
+          "realized_pnl": {
+            "available": true,
+            "entry_price": 2.48,
+            "exit_price": 1.94,
+            "contracts": 4,
+            "realized_pnl": -216.0,
+            "realized_pnl_percent": -21.77
+          },
+          "thesis_valid": true,
+          "exit_execution": {
+            "status": "DRY_RUN",
+            "message": "Closing multi-leg order built but NOT sent to Alpaca",
+            "order": {
+              "action": "CLOSE_POSITION",
+              "strategy": "BEAR_PUT_SPREAD",
+              "symbol": "AMD",
+              "contracts": 4,
+              "limit_price": 1.94,
+              "legs": [
+                {
+                  "symbol": "AMD260904P00457500",
+                  "side": "SELL",
+                  "ratio_qty": 1
+                },
+                {
+                  "symbol": "AMD260904P00452500",
+                  "side": "BUY",
+                  "ratio_qty": 1
+                }
+              ]
+            }
+          }
+        }
+      }
+    ],
+    "autonomous": {
+      "selected_symbol": "AMD",
+      "scan_summary": {
+        "scanned_count": 8,
+        "candidate_count": 1
+      },
+      "scanned_count": 8,
+      "candidate_count": 1
+    },
+    "exit_execution": {
+      "status": "DRY_RUN",
+      "message": "Closing multi-leg order built but NOT sent to Alpaca",
+      "order": {
+        "action": "CLOSE_POSITION",
+        "strategy": "BEAR_PUT_SPREAD",
+        "symbol": "AMD",
+        "contracts": 4,
+        "limit_price": 1.94,
+        "legs": [
+          {
+            "symbol": "AMD260904P00457500",
+            "side": "SELL",
+            "ratio_qty": 1
+          },
+          {
+            "symbol": "AMD260904P00452500",
+            "side": "BUY",
+            "ratio_qty": 1
+          }
+        ]
+      }
+    },
+    "realized_pnl": {
+      "available": true,
+      "entry_price": 2.48,
+      "exit_price": 1.94,
+      "contracts": 4,
+      "realized_pnl": -216.0,
+      "realized_pnl_percent": -21.77
+    },
+    "closed_at": "2026-09-03T10:31:00.678520+00:00"
+  },
+  {
+    "id": "09ad861e-1004-4268-880a-40dc865c15b6",
+    "created_at": "2026-09-03T10:30:48.533825+00:00",
+    "updated_at": "2026-09-03T10:30:48.533825+00:00",
+    "mode": "MANUAL",
+    "symbol": "QQQ",
+    "status": "WAIT",
+    "stage": "OPPORTUNITY_ENGINE",
+    "message": "No sufficiently aligned trading opportunity detected.",
+    "direction": "NEUTRAL",
+    "strategy": null,
+    "opportunity": {
+      "symbol": "QQQ",
+      "direction": "NEUTRAL",
+      "action": "WAIT",
+      "strategy": null,
+      "reasons": [
+        "1H trend: BEARISH",
+        "15M trend: NEUTRAL",
+        "15M momentum: OVEREXTENDED_BULLISH",
+        "Conditions are not sufficiently aligned for a trade candidate"
+      ]
+    },
+    "thesis": {},
+    "fragility_score": null,
+    "fragility_classification": null,
+    "fragility_decision": null,
+    "fragility": {},
+    "contracts": {},
+    "pricing": {},
+    "risk": {},
+    "approved_contracts": null,
+    "maximum_loss": null,
+    "execution": {},
+    "execution_status": "WAIT",
+    "position_status": "NO_POSITION",
+    "position_decision": "NOT_APPLICABLE",
+    "position_history": [],
+    "autonomous": {}
+  },
+  {
+    "id": "a2f1d867-5b6d-4d3c-95b5-a90307054851",
+    "created_at": "2026-09-03T10:31:17.482016+00:00",
+    "updated_at": "2026-09-03T10:51:37.248556+00:00",
+    "mode": "AUTONOMOUS",
+    "symbol": "AMD",
+    "status": "DRY_RUN",
+    "stage": "EXECUTION_COMPLETE",
+    "message": "Multi-leg order built but NOT sent to Alpaca",
+    "direction": "BEARISH",
+    "strategy": "BEAR_PUT_SPREAD",
+    "opportunity": {
+      "symbol": "AMD",
+      "direction": "BEARISH",
+      "action": "CANDIDATE",
+      "strategy": "BEAR_PUT_SPREAD",
+      "reasons": [
+        "1H trend is bearish",
+        "15M trend confirms bearish direction",
+        "15M RSI confirms bearish momentum"
+      ]
+    },
+    "thesis": {
+      "symbol": "AMD",
+      "direction": "BEARISH",
+      "confidence": "MEDIUM",
+      "supporting_evidence": [
+        "Hourly price remains below both the 20 EMA and 50 EMA, supporting a bearish market structure.",
+        "Entry timeframe structure confirms the bearish direction.",
+        "RSI remains below the neutral 50 level across both timeframes.",
+        "Entry timeframe volume is elevated, indicating increased market participation."
+      ],
+      "contradictions": [
+        "Extremely elevated volume may represent exhaustion or a potential reversal event.",
+        "Entry RSI is stronger than hourly RSI, indicating possible weakening bearish momentum."
+      ],
+      "neutral_scenario": "Price consolidates and directional momentum weakens, causing the market structure to become inconclusive.",
+      "failure_scenario": "Price recovers above the short-term moving average structure and invalidates the bearish directional thesis.",
+      "reasoning_summary": "This thesis was generated using TARK's deterministic fallback analysis because the external AI provider was unavailable.",
+      "source": "DETERMINISTIC_FALLBACK",
+      "ai_error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.5-flash\\nPlease retry in 45.52157357s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '45s'}]}}"
+    },
+    "fragility_score": 25,
+    "fragility_classification": "LOW",
+    "fragility_decision": "TRADE",
+    "fragility": {
+      "score": 25,
+      "classification": "LOW",
+      "decision": "TRADE",
+      "override": null,
+      "components": {
+        "trend": 0,
+        "momentum": 0,
+        "volume": 0,
+        "neutral_pressure": 10,
+        "failure_pressure": 10,
+        "volatility": 5
+      }
+    },
+    "contracts": {
+      "strategy": "BEAR_PUT_SPREAD",
+      "symbol": "AMD",
+      "expiration_date": "2026-09-04",
+      "long_leg": {
+        "symbol": "AMD260904P00457500",
+        "strike": 457.5,
+        "side": "BUY",
+        "type": "PUT"
+      },
+      "short_leg": {
+        "symbol": "AMD260904P00452500",
+        "strike": 452.5,
+        "side": "SELL",
+        "type": "PUT"
+      }
+    },
+    "pricing": {
+      "long_leg": {
+        "symbol": "AMD260904P00457500",
+        "bid": 7.39,
+        "ask": 7.58,
+        "mid": 7.48
+      },
+      "short_leg": {
+        "symbol": "AMD260904P00452500",
+        "bid": 5.1,
+        "ask": 5.45,
+        "mid": 5.28
+      },
+      "estimated_debit": 2.48,
+      "estimated_mid_debit": 2.2,
+      "estimated_exit_credit": 1.94
+    },
+    "risk": {
+      "status": "APPROVED",
+      "reason_codes": [],
+      "symbol": "AMD",
+      "strategy": "BEAR_PUT_SPREAD",
+      "decision": "TRADE",
+      "account_equity": 100000.0,
+      "start_of_day_equity": 100000.0,
+      "max_trade_risk": 1000.0,
+      "risk_per_spread": 248.0,
+      "requested_contracts": 5,
+      "maximum_contracts": 4,
+      "approved_contracts": 4,
+      "proposed_max_loss": 992.0,
+      "current_portfolio_risk": 0.0,
+      "proposed_portfolio_risk": 992.0,
+      "max_portfolio_risk": 2000.0,
+      "daily_realized_pnl": 0.0,
+      "daily_loss_limit": 2000.0,
+      "buying_power": 400000.0
+    },
+    "approved_contracts": 4,
+    "maximum_loss": 992.0,
+    "execution": {
+      "status": "DRY_RUN",
+      "message": "Multi-leg order built but NOT sent to Alpaca",
+      "order": {
+        "strategy": "BEAR_PUT_SPREAD",
+        "symbol": "AMD",
+        "contracts": 4,
+        "limit_price": 2.48,
+        "expiration_date": "2026-09-04",
+        "legs": [
+          {
+            "symbol": "AMD260904P00457500",
+            "side": "BUY",
+            "ratio_qty": 1
+          },
+          {
+            "symbol": "AMD260904P00452500",
+            "side": "SELL",
+            "ratio_qty": 1
+          }
+        ]
+      }
+    },
+    "execution_status": "DRY_RUN",
+    "position_status": "CLOSED",
+    "position_decision": "EXIT",
+    "position_history": [
+      {
+        "timestamp": "2026-09-03T10:51:37.160732+00:00",
+        "decision": "EXIT",
+        "reason": "Structural fragility reached the critical exit threshold.",
+        "details": {
+          "opportunity": {
+            "symbol": "AMD",
+            "direction": "BEARISH",
+            "action": "CANDIDATE",
+            "strategy": "BEAR_PUT_SPREAD",
+            "reasons": [
+              "1H trend is bearish",
+              "15M trend confirms bearish direction",
+              "15M RSI confirms bearish momentum"
+            ]
+          },
+          "fragility": {
+            "score": 25,
+            "classification": "LOW",
+            "decision": "TRADE",
+            "override": null,
+            "components": {
+              "trend": 0,
+              "momentum": 0,
+              "volume": 0,
+              "neutral_pressure": 10,
+              "failure_pressure": 10,
+              "volatility": 5
+            }
+          },
+          "pricing": {
+            "long_leg": {
+              "symbol": "AMD260904P00457500",
+              "bid": 7.39,
+              "ask": 7.58,
+              "mid": 7.48
+            },
+            "short_leg": {
+              "symbol": "AMD260904P00452500",
+              "bid": 5.1,
+              "ask": 5.45,
+              "mid": 5.28
+            },
+            "estimated_debit": 2.48,
+            "estimated_mid_debit": 2.2,
+            "estimated_exit_credit": 1.94
+          },
+          "pnl": {
+            "available": true,
+            "entry_price": 2.48,
+            "current_mark": 2.2,
+            "contracts": 4,
+            "unrealized_pnl": -112.0,
+            "unrealized_pnl_percent": -11.29
+          },
+          "realized_pnl": {
+            "available": true,
+            "entry_price": 2.48,
+            "exit_price": 1.94,
+            "contracts": 4,
+            "realized_pnl": -216.0,
+            "realized_pnl_percent": -21.77
+          },
+          "thesis_valid": true,
+          "exit_execution": {
+            "status": "DRY_RUN",
+            "message": "Closing multi-leg order built but NOT sent to Alpaca",
+            "order": {
+              "action": "CLOSE_POSITION",
+              "strategy": "BEAR_PUT_SPREAD",
+              "symbol": "AMD",
+              "contracts": 4,
+              "limit_price": 1.94,
+              "legs": [
+                {
+                  "symbol": "AMD260904P00457500",
+                  "side": "SELL",
+                  "ratio_qty": 1
+                },
+                {
+                  "symbol": "AMD260904P00452500",
+                  "side": "BUY",
+                  "ratio_qty": 1
+                }
+              ]
+            }
+          }
+        }
+      }
+    ],
+    "autonomous": {
+      "selected_symbol": "AMD",
+      "scan_summary": {
+        "scanned_count": 8,
+        "candidate_count": 1
+      },
+      "scanned_count": 8,
+      "candidate_count": 1
+    },
+    "exit_execution": {
+      "status": "DRY_RUN",
+      "message": "Closing multi-leg order built but NOT sent to Alpaca",
+      "order": {
+        "action": "CLOSE_POSITION",
+        "strategy": "BEAR_PUT_SPREAD",
+        "symbol": "AMD",
+        "contracts": 4,
+        "limit_price": 1.94,
+        "legs": [
+          {
+            "symbol": "AMD260904P00457500",
+            "side": "SELL",
+            "ratio_qty": 1
+          },
+          {
+            "symbol": "AMD260904P00452500",
+            "side": "BUY",
+            "ratio_qty": 1
+          }
+        ]
+      }
+    },
+    "realized_pnl": {
+      "available": true,
+      "entry_price": 2.48,
+      "exit_price": 1.94,
+      "contracts": 4,
+      "realized_pnl": -216.0,
+      "realized_pnl_percent": -21.77
+    },
+    "closed_at": "2026-09-03T10:51:37.247500+00:00"
+  },
+  {
+    "id": "81988530-d57e-475d-8b4d-8a1559f69577",
+    "created_at": "2026-09-03T10:51:54.027476+00:00",
+    "updated_at": "2026-09-03T10:51:54.027476+00:00",
+    "mode": "AUTONOMOUS",
+    "symbol": "AMD",
+    "status": "DRY_RUN",
+    "stage": "EXECUTION_COMPLETE",
+    "message": "Multi-leg order built but NOT sent to Alpaca",
+    "direction": "BEARISH",
+    "strategy": "BEAR_PUT_SPREAD",
+    "opportunity": {
+      "symbol": "AMD",
+      "direction": "BEARISH",
+      "action": "CANDIDATE",
+      "strategy": "BEAR_PUT_SPREAD",
+      "reasons": [
+        "1H trend is bearish",
+        "15M trend confirms bearish direction",
+        "15M RSI confirms bearish momentum"
+      ]
+    },
+    "thesis": {
+      "symbol": "AMD",
+      "direction": "BEARISH",
+      "confidence": "MEDIUM",
+      "supporting_evidence": [
+        "Hourly price remains below both the 20 EMA and 50 EMA, supporting a bearish market structure.",
+        "Entry timeframe structure confirms the bearish direction.",
+        "RSI remains below the neutral 50 level across both timeframes.",
+        "Entry timeframe volume is elevated, indicating increased market participation."
+      ],
+      "contradictions": [
+        "Extremely elevated volume may represent exhaustion or a potential reversal event.",
+        "Entry RSI is stronger than hourly RSI, indicating possible weakening bearish momentum."
+      ],
+      "neutral_scenario": "Price consolidates and directional momentum weakens, causing the market structure to become inconclusive.",
+      "failure_scenario": "Price recovers above the short-term moving average structure and invalidates the bearish directional thesis.",
+      "reasoning_summary": "This thesis was generated using TARK's deterministic fallback analysis because the external AI provider was unavailable.",
+      "source": "DETERMINISTIC_FALLBACK",
+      "ai_error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.5-flash\\nPlease retry in 9.033282532s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '9s'}]}}"
+    },
+    "fragility_score": 25,
+    "fragility_classification": "LOW",
+    "fragility_decision": "TRADE",
+    "fragility": {
+      "score": 25,
+      "classification": "LOW",
+      "decision": "TRADE",
+      "override": null,
+      "components": {
+        "trend": 0,
+        "momentum": 0,
+        "volume": 0,
+        "neutral_pressure": 10,
+        "failure_pressure": 10,
+        "volatility": 5
+      }
+    },
+    "contracts": {
+      "strategy": "BEAR_PUT_SPREAD",
+      "symbol": "AMD",
+      "expiration_date": "2026-09-04",
+      "long_leg": {
+        "symbol": "AMD260904P00457500",
+        "strike": 457.5,
+        "side": "BUY",
+        "type": "PUT"
+      },
+      "short_leg": {
+        "symbol": "AMD260904P00452500",
+        "strike": 452.5,
+        "side": "SELL",
+        "type": "PUT"
+      }
+    },
+    "pricing": {
+      "long_leg": {
+        "symbol": "AMD260904P00457500",
+        "bid": 7.39,
+        "ask": 7.58,
+        "mid": 7.48
+      },
+      "short_leg": {
+        "symbol": "AMD260904P00452500",
+        "bid": 5.1,
+        "ask": 5.45,
+        "mid": 5.28
+      },
+      "estimated_debit": 2.48,
+      "estimated_mid_debit": 2.2,
+      "estimated_exit_credit": 1.94
+    },
+    "risk": {
+      "status": "APPROVED",
+      "reason_codes": [],
+      "symbol": "AMD",
+      "strategy": "BEAR_PUT_SPREAD",
+      "decision": "TRADE",
+      "account_equity": 100000.0,
+      "start_of_day_equity": 100000.0,
+      "max_trade_risk": 1000.0,
+      "risk_per_spread": 248.0,
+      "requested_contracts": 5,
+      "maximum_contracts": 4,
+      "approved_contracts": 4,
+      "proposed_max_loss": 992.0,
+      "current_portfolio_risk": 0.0,
+      "proposed_portfolio_risk": 992.0,
+      "max_portfolio_risk": 2000.0,
+      "daily_realized_pnl": 0.0,
+      "daily_loss_limit": 2000.0,
+      "buying_power": 400000.0
+    },
+    "approved_contracts": 4,
+    "maximum_loss": 992.0,
+    "execution": {
+      "status": "DRY_RUN",
+      "message": "Multi-leg order built but NOT sent to Alpaca",
+      "order": {
+        "strategy": "BEAR_PUT_SPREAD",
+        "symbol": "AMD",
+        "contracts": 4,
+        "limit_price": 2.48,
+        "expiration_date": "2026-09-04",
+        "legs": [
+          {
+            "symbol": "AMD260904P00457500",
+            "side": "BUY",
+            "ratio_qty": 1
+          },
+          {
+            "symbol": "AMD260904P00452500",
+            "side": "SELL",
+            "ratio_qty": 1
+          }
+        ]
+      }
+    },
+    "execution_status": "DRY_RUN",
+    "position_status": "SIMULATED",
+    "position_decision": "PENDING",
+    "position_history": [],
+    "autonomous": {
+      "selected_symbol": "AMD",
+      "scan_summary": {
+        "scanned_count": 8,
+        "candidate_count": 1
+      },
+      "scanned_count": 8,
+      "candidate_count": 1
+    }
+  },
+  {
+    "id": "67f1169d-ee08-451c-b164-1d7f0bc090db",
+    "created_at": "2026-09-03T10:52:10.023577+00:00",
+    "updated_at": "2026-09-03T10:52:10.023577+00:00",
+    "mode": "MANUAL",
+    "symbol": "QQQ",
+    "status": "WAIT",
+    "stage": "OPPORTUNITY_ENGINE",
+    "message": "No sufficiently aligned trading opportunity detected.",
+    "direction": "NEUTRAL",
+    "strategy": null,
+    "opportunity": {
+      "symbol": "QQQ",
+      "direction": "NEUTRAL",
+      "action": "WAIT",
+      "strategy": null,
+      "reasons": [
+        "1H trend: BEARISH",
+        "15M trend: NEUTRAL",
+        "15M momentum: OVEREXTENDED_BULLISH",
+        "Conditions are not sufficiently aligned for a trade candidate"
+      ]
+    },
+    "thesis": {},
+    "fragility_score": null,
+    "fragility_classification": null,
+    "fragility_decision": null,
+    "fragility": {},
+    "contracts": {},
+    "pricing": {},
+    "risk": {},
+    "approved_contracts": null,
+    "maximum_loss": null,
+    "execution": {},
+    "execution_status": "WAIT",
+    "position_status": "NO_POSITION",
+    "position_decision": "NOT_APPLICABLE",
+    "position_history": [],
+    "autonomous": {}
+  },
+  {
+    "id": "86aad55e-3376-4c43-be48-4f193d439e7a",
+    "created_at": "2026-09-03T10:52:19.030129+00:00",
+    "updated_at": "2026-09-03T10:52:19.030129+00:00",
+    "mode": "MANUAL",
+    "symbol": "SPY",
+    "status": "WAIT",
+    "stage": "OPPORTUNITY_ENGINE",
+    "message": "No sufficiently aligned trading opportunity detected.",
+    "direction": "NEUTRAL",
+    "strategy": null,
+    "opportunity": {
+      "symbol": "SPY",
+      "direction": "NEUTRAL",
+      "action": "WAIT",
+      "strategy": null,
+      "reasons": [
+        "1H trend: NEUTRAL",
+        "15M trend: BULLISH",
+        "15M momentum: BULLISH_CONFIRMED",
+        "Conditions are not sufficiently aligned for a trade candidate"
+      ]
+    },
+    "thesis": {},
+    "fragility_score": null,
+    "fragility_classification": null,
+    "fragility_decision": null,
+    "fragility": {},
+    "contracts": {},
+    "pricing": {},
+    "risk": {},
+    "approved_contracts": null,
+    "maximum_loss": null,
+    "execution": {},
+    "execution_status": "WAIT",
+    "position_status": "NO_POSITION",
+    "position_decision": "NOT_APPLICABLE",
+    "position_history": [],
+    "autonomous": {}
+  }
+]
